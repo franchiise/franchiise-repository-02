@@ -12,7 +12,7 @@ h3 {
 
 }
 
-div#line {
+#line-00 {
 
     background-color: black;
 
@@ -24,7 +24,7 @@ div#line {
 
 }
 
-div#formas {
+#formas {
 
     background-color: white;
 
@@ -60,15 +60,72 @@ div#formas {
 
 }
 
-#quadrado:hover {
+    #quadrado:hover {
 
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
 
-    transform: scale(1.05);
+        transform: scale(1.05);
 
-    transition: 250ms;
+        transition: 250ms;
+
+    }
+
+#line-01 {
+
+    background-color: black;
+
+    width: 65px;
+    height: 1px;
+    
+    margin-left: 8px;
+    margin-top: 8px;
 
 }
+
+#triangulo {
+
+	width: 0;
+    height: 0;
+
+    border-color: black;
+    
+	border-left: 20px solid white;
+    border-right: 20px solid white;
+    
+    border-bottom: 35px solid white;
+    
+    position: relative;
+    top: 60px;
+
+    margin-left: 20px;
+
+    cursor: pointer;
+
+}
+
+#trianguloBorder {
+
+    width: 0;
+    height: 0;
+
+    border-color: black;
+    
+	border-left: 20px solid white;
+    border-right: 20px solid white;
+    
+    border-bottom: 35px solid black;
+
+}
+
+    #triangulo:hover {
+
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
+
+        transform: scale(1.05);
+
+        transition: 250ms;
+
+    }
 
 @media (max-width: 440px) {
 
@@ -78,13 +135,25 @@ div#formas {
 
     }
 
-    div#formas {
+    #formas {
 
         width: 380px;
-        height: 50px;
+        height: 40px;
 
         margin: auto;
         margin-top: 15px;
+
+    }
+
+    #quadrado {
+
+        width: 20px;
+        height: 20px;
+
+        position: relative;
+        top: 1.4vh;
+        
+        margin-left: 10px;
 
     }
 
