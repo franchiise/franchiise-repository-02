@@ -31,8 +31,6 @@ h3 {
     width: 80px;
     height: 400px;
 
-    max-width: 100%;
-
     border-radius: 2.5px;
 
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.158);
@@ -280,11 +278,11 @@ h3 {
 
     #formas {
 
-        width: 380px;
+        width: 250px;
         height: 40px;
 
-        margin: auto;
         margin-top: 15px;
+        margin-left: 10px;
 
     }
 
@@ -304,7 +302,7 @@ h3 {
         width: 1px;
         height: 30px;
 
-        margin-top: -72px;
+        margin-top: -122px;
         margin-left: 40px;
 
     }
@@ -360,7 +358,55 @@ h3 {
 
         top: -48px;
             
-        margin-left: 145px;
+        margin-left: 143px;
+
+    }
+
+    #line-04 {
+
+        width: 0.5px;
+        height: 30px;
+
+        margin-top: -30px;
+        margin-left: 172px;
+
+    }
+
+    #trapezio {
+
+        width: 15px;
+
+        border-bottom: 20px solid black;
+
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+
+        top: -67px;
+
+        margin-left: 182px;
+
+    }
+
+    #line-05 {
+
+        width: 0.5px;
+        height: 30px;
+
+        margin-top: -30px;
+        margin-left: 185px;            
+
+    }
+
+}
+
+@media (max-width: 295px) {
+
+    #formas {
+
+        max-width: 100%;
+
+        margin-top: 15px;
+        margin-left: 10px;
 
     }
 
