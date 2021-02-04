@@ -278,11 +278,11 @@ h3 {
 
     #formas {
 
-        width: 250px;
+        width: 260px;
         height: 40px;
 
         margin-top: 15px;
-        margin-left: 10px;
+        margin-left: 2px;
 
     }
 
@@ -299,10 +299,10 @@ h3 {
 
     #line-01 {
 
-        width: 1px;
+        width: 0.5px;
         height: 30px;
 
-        margin-top: -122px;
+        margin-top: -110px;
         margin-left: 40px;
 
     }
@@ -393,20 +393,18 @@ h3 {
         height: 30px;
 
         margin-top: -30px;
-        margin-left: 185px;            
+        margin-left: 223px;            
 
     }
 
-}
+    #circulo {
 
-@media (max-width: 295px) {
+        width: 17px;
+        height: 17px;
 
-    #formas {
-
-        max-width: 100%;
-
-        margin-top: 15px;
-        margin-left: 10px;
+        top: -85px;
+            
+        margin-left: 233px;
 
     }
 
