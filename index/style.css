@@ -71,6 +71,8 @@ h3 {
 
     cursor: pointer;
 
+    transition: 250ms;
+
 }
 
     #quadrado:hover {
@@ -80,6 +82,12 @@ h3 {
         transform: scale(1.05);
 
         transition: 250ms;
+
+    }
+
+    @keyframes rotate-quadrado {
+
+        100% {transform: rotate(360deg);}
 
     }
 
