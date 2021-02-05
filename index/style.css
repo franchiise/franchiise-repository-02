@@ -44,10 +44,14 @@ h3 {
 
 #check {
 
+    border: 2px solid white;
+
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.137);
+
     position: absolute;
     
     margin-top: 15px;
-    margin-left: 84px;
+    margin-left: 85px;
 
     transition: 250ms;
 
