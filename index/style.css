@@ -304,6 +304,39 @@ h3 {
 
     }
 
+#medidas {
+
+    margin-top: 190px;
+    margin-left: 20px;
+
+}
+
+#baseForma {
+
+    width: 80px;
+    height: 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
+
+}
+
+#alturaForma {
+
+    width: 80px;
+    height: 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
+
+    margin-top: 0px;
+
+}
+
 @media (max-width: 540px) {
 
     h3 {
