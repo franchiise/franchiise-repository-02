@@ -44,16 +44,18 @@ h3 {
 
 #check {
 
+    background-color: white;
+
     border: 2px solid white;
 
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.137);
 
     position: absolute;
     
-    margin-top: 15px;
+    margin-top: -50px;
     margin-left: 85px;
 
-    transition: 250ms;
+    opacity: 0;
 
 }
 
@@ -70,8 +72,6 @@ h3 {
     margin-left: 25px;
 
     cursor: pointer;
-
-    transition: 250ms;
 
 }
 
@@ -295,6 +295,12 @@ h3 {
 
         0% {transform: scale(0);}
         100% {transform: scale(1);}
+
+    }
+
+    @keyframes rotateForma {
+
+        100% {transform: rotate(3600deg);}
 
     }
 
