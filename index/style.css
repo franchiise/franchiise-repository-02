@@ -304,7 +304,7 @@ h3 {
 
     }
 
-@media (max-width: 440px) {
+@media (max-width: 540px) {
 
     h3 {
 
@@ -447,6 +447,12 @@ h3 {
         top: -85px;
             
         margin-left: 233px;
+
+    }
+
+    #forma {
+
+        margin-top: 300px;
 
     }
 

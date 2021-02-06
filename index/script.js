@@ -27,9 +27,10 @@ function quadrado() {
     forma.appendChild(imgQuadrado)
     forma.style.animation = '500ms increaseOut'
 
-    imgQuadrado.style.width = '300px'
-    imgQuadrado.style.marginTop = '-250px'
-    imgQuadrado.style.marginLeft = '600px'
+    imgQuadrado.style.width = '150px'
+    imgQuadrado.style.position = 'relative'
+    imgQuadrado.style.top = '-210px'
+    imgQuadrado.style.margin = 'auto'
 
     check.style.marginTop = '15px'
     check.style.opacity = '1'
@@ -61,9 +62,10 @@ function retangulo() {
     forma.appendChild(imgRetangulo)
     forma.style.animation = '500ms increaseOut'
 
-    imgRetangulo.style.width = '400px'
-    imgRetangulo.style.marginTop = '-240px'
-    imgRetangulo.style.marginLeft = '550px'
+    imgRetangulo.style.width = '200px'
+    imgRetangulo.style.position = 'relative'
+    imgRetangulo.style.top = '-210px'
+    imgRetangulo.style.margin = 'auto'
 
     check.style.marginTop = '83px'
     check.style.opacity = '1'
@@ -95,9 +97,10 @@ function triangulo() {
     forma.appendChild(imgTriangulo)
     forma.style.animation = '500ms increaseOut'
 
-    imgTriangulo.style.width = '300px'
-    imgTriangulo.style.marginTop = '-240px'
-    imgTriangulo.style.marginLeft = '600px'
+    imgTriangulo.style.width = '150px'
+    imgTriangulo.style.position = 'relative'
+    imgTriangulo.style.top = '-210px'
+    imgTriangulo.style.margin = 'auto'
 
     check.style.marginTop = '143px'
     check.style.opacity = '1'
@@ -129,9 +132,10 @@ function losango() {
     forma.appendChild(imgLosango)
     forma.style.animation = '500ms increaseOut'
 
-    imgLosango.style.width = '200px'
-    imgLosango.style.marginTop = '-280px'
-    imgLosango.style.marginLeft = '650px'
+    imgLosango.style.width = '150px'
+    imgLosango.style.position = 'relative'
+    imgLosango.style.top = '-210px'
+    imgLosango.style.margin = 'auto'
 
     check.style.marginTop = '205px'
     check.style.opacity = '1'
@@ -163,9 +167,10 @@ function trapezio() {
     forma.appendChild(imgTrapezio)
     forma.style.animation = '500ms increaseOut'
 
-    imgTrapezio.style.width = '350px'
-    imgTrapezio.style.marginTop = '-200px'
-    imgTrapezio.style.marginLeft = '575px'
+    imgTrapezio.style.width = '200px'
+    imgTrapezio.style.position = 'relative'
+    imgTrapezio.style.top = '-200px'
+    imgTrapezio.style.margin = 'auto'
 
     check.style.marginTop = '280px'
     check.style.opacity = '1'
@@ -197,9 +202,10 @@ function circulo() {
     forma.appendChild(imgCirculo)
     forma.style.animation = '500ms increaseOut'
 
-    imgCirculo.style.width = '300px'
-    imgCirculo.style.marginTop = '-250px'
-    imgCirculo.style.marginLeft = '600px'
+    imgCirculo.style.width = '150px'
+    imgCirculo.style.position = 'relative'
+    imgCirculo.style.top = '-210px'
+    imgCirculo.style.margin = 'auto'
 
     check.style.marginTop = '348px'
     check.style.opacity = '1'
