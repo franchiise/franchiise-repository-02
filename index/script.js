@@ -1,13 +1,19 @@
 const forma = document.querySelector('#forma')
 
+let check = document.querySelector('#check')
+
 let imgQuadrado = document.createElement('img')
 let imgRetangulo = document.createElement('img')
 let imgTriangulo = document.createElement('img')
+
 let imgLosango = document.createElement('img')
 let imgTrapezio = document.createElement('img')
 let imgCirculo = document.createElement('img')
 
-let check = document.querySelector('#check')
+let medidas = document.querySelector('#medidas')
+
+let base = document.querySelector('#baseForma')
+let altura = document.querySelector('#alturaForma')
 
 function quadrado() {
 
@@ -27,7 +33,7 @@ function quadrado() {
     forma.appendChild(imgQuadrado)
     forma.style.animation = '500ms increaseOut'
 
-    imgQuadrado.style.width = '150px'
+    imgQuadrado.style.width = '200px'
     imgQuadrado.style.position = 'relative'
     imgQuadrado.style.top = '-210px'
     imgQuadrado.style.margin = 'auto'
@@ -41,6 +47,32 @@ function quadrado() {
         imgQuadrado.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    medidas.style.marginTop = '-66px'
+
+}
+
+function calcular() {
+
+    if (base.value.length == 0 || altura.value.length == 0) {
+
+        alert('[ERRO] Preencha todos as medidas')
+
+    } else {
+
+        var b = Number(base.value) 
+        var h = Number(altura.value)
+        
+        b *= 10
+        h *= 10
+
+        var widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+        var heightQuadrado = parseInt(imgQuadrado.style.height, 10)
+
+        widthQuadrado = b
+        heightQuadrado = h
+
+    }
 
 }
 
@@ -62,7 +94,7 @@ function retangulo() {
     forma.appendChild(imgRetangulo)
     forma.style.animation = '500ms increaseOut'
 
-    imgRetangulo.style.width = '200px'
+    imgRetangulo.style.width = '250px'
     imgRetangulo.style.position = 'relative'
     imgRetangulo.style.top = '-210px'
     imgRetangulo.style.margin = 'auto'
@@ -76,6 +108,8 @@ function retangulo() {
         imgRetangulo.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    medidas.style.marginTop = '-33px'
 
 }
 
@@ -97,7 +131,7 @@ function triangulo() {
     forma.appendChild(imgTriangulo)
     forma.style.animation = '500ms increaseOut'
 
-    imgTriangulo.style.width = '150px'
+    imgTriangulo.style.width = '200px'
     imgTriangulo.style.position = 'relative'
     imgTriangulo.style.top = '-210px'
     imgTriangulo.style.margin = 'auto'
@@ -111,6 +145,8 @@ function triangulo() {
         imgTriangulo.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    medidas.style.marginTop = '-40px'
 
 }
 
@@ -132,12 +168,12 @@ function losango() {
     forma.appendChild(imgLosango)
     forma.style.animation = '500ms increaseOut'
 
-    imgLosango.style.width = '150px'
+    imgLosango.style.width = '200px'
     imgLosango.style.position = 'relative'
     imgLosango.style.top = '-210px'
     imgLosango.style.margin = 'auto'
 
-    check.style.marginTop = '205px'
+    check.style.marginTop = '200px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -146,6 +182,8 @@ function losango() {
         imgLosango.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    medidas.style.marginTop = '-133px'
 
 }
 
@@ -182,6 +220,8 @@ function trapezio() {
 
     }, 500)
 
+    medidas.style.marginTop = '1px'
+
 }
 
 function circulo() {
@@ -202,7 +242,7 @@ function circulo() {
     forma.appendChild(imgCirculo)
     forma.style.animation = '500ms increaseOut'
 
-    imgCirculo.style.width = '150px'
+    imgCirculo.style.width = '200px'
     imgCirculo.style.position = 'relative'
     imgCirculo.style.top = '-210px'
     imgCirculo.style.margin = 'auto'
@@ -210,5 +250,7 @@ function circulo() {
     check.style.marginTop = '348px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
+
+    medidas.style.marginTop = '-65px'
 
 }

@@ -306,7 +306,7 @@ h3 {
 
 #medidas {
 
-    margin-top: 190px;
+    margin-top: 150px;
     margin-left: 20px;
 
 }
@@ -334,6 +334,32 @@ h3 {
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
 
     margin-top: 0px;
+
+}
+
+button {
+
+    background-color: white;
+
+    padding: 5px;
+
+    border: 1px solid rgba(0, 0, 0, 0.733);
+
+    cursor: pointer;
+
+    transition: 250ms;
+
+    outline: none;
+
+}
+
+button:hover {
+
+    background-color: black;
+
+    color: white;
+
+    border: 1px solid white;
 
 }
 
