@@ -69,9 +69,8 @@ function calcular() {
         var widthQuadrado = parseInt(imgQuadrado.style.width, 10)
         var heightQuadrado = parseInt(imgQuadrado.style.height, 10)
 
-        widthQuadrado = b
-        heightQuadrado = h
-
+        imgQuadrado
+        
     }
 
 }
