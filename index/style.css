@@ -318,8 +318,9 @@ h3 {
 
 #medidas {
 
-    margin-top: 150px;
-    margin-left: 20px;
+    position: absolute;
+    top: 610px;
+    left: 25px;
 
 }
 

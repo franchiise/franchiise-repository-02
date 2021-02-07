@@ -33,11 +33,11 @@ function quadrado() {
     imgQuadrado.style.height = '200px'
 
     imgQuadrado.style.position = 'relative'
-    imgQuadrado.style.top = '-210px'
+    imgQuadrado.style.top = '-193px'
     
     imgQuadrado.style.margin = 'auto'
 
-    imgQuadrado.style.display = 'block'
+    imgQuadrado.style.display = 'flex'
 
     forma.appendChild(imgQuadrado)
     forma.style.animation = '500ms increaseOut'
@@ -52,12 +52,8 @@ function quadrado() {
 
     }, 500)
 
-    medidas.style.marginTop = '-66px'
-
     base.disabled = false
     altura.disabled = false
-
-
 
 }
 
@@ -97,8 +93,6 @@ function retangulo() {
         imgRetangulo.style.animation = '360s rotateForma infinite'
 
     }, 500)
-
-    medidas.style.marginTop = '-46px'
 
     base.disabled = false
     altura.disabled = false
@@ -142,8 +136,6 @@ function triangulo() {
 
     }, 500)
 
-    medidas.style.marginTop = '-46px'
-
     base.disabled = false
     altura.disabled = false
 
@@ -184,8 +176,6 @@ function losango() {
         imgLosango.style.animation = '360s rotateForma infinite'
 
     }, 500)
-
-    medidas.style.marginTop = '-133.5px'
 
     base.disabled = false
     altura.disabled = false
@@ -229,8 +219,6 @@ function trapezio() {
 
     }, 500)
 
-    medidas.style.marginTop = '-16px'
-
     base.disabled = false
     altura.disabled = false
 
@@ -266,8 +254,6 @@ function circulo() {
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
-    medidas.style.marginTop = '-65.5px'
-
     base.disabled = false
     altura.disabled = false
 
@@ -293,6 +279,8 @@ function calcular() {
             imgQuadrado.style.width = valorMaximo + 'px'
             imgQuadrado.style.height = valorMaximo + 'px'
 
+            imgQuadrado.style.top = '-285px'    
+
         } else {
 
             let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
@@ -302,14 +290,13 @@ function calcular() {
             imgQuadrado.style.width = resQuadrado + 'px'
             imgQuadrado.style.height = resQuadrado + 'px'
 
-            setTimeout(function () {
-
-                imgQuadrado.style.animation = '2s resetRotateForma'
-
-            }, 500)
-
         }
 
+        imgQuadrado.style.animation = '2s resetRotateForma'
+
+        base.value = ''
+        altura.value = ''
+        
     }
 
 }
