@@ -310,6 +310,12 @@ h3 {
 
     }
 
+    @keyframes resetRotateForma {
+
+        100% {transform: rotate(360deg);}
+
+    }
+
 #medidas {
 
     margin-top: 150px;

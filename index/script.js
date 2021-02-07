@@ -57,6 +57,8 @@ function quadrado() {
     base.disabled = false
     altura.disabled = false
 
+
+
 }
 
 function retangulo() {
@@ -97,6 +99,9 @@ function retangulo() {
     }, 500)
 
     medidas.style.marginTop = '-46px'
+
+    base.disabled = false
+    altura.disabled = false
 
 }
 
@@ -139,6 +144,9 @@ function triangulo() {
 
     medidas.style.marginTop = '-46px'
 
+    base.disabled = false
+    altura.disabled = false
+
 }
 
 function losango() {
@@ -178,6 +186,9 @@ function losango() {
     }, 500)
 
     medidas.style.marginTop = '-133.5px'
+
+    base.disabled = false
+    altura.disabled = false
 
 }
 
@@ -220,6 +231,9 @@ function trapezio() {
 
     medidas.style.marginTop = '-16px'
 
+    base.disabled = false
+    altura.disabled = false
+
 }
 
 function circulo() {
@@ -254,6 +268,9 @@ function circulo() {
 
     medidas.style.marginTop = '-65.5px'
 
+    base.disabled = false
+    altura.disabled = false
+
 }
 
 function calcular() {
@@ -264,19 +281,35 @@ function calcular() {
 
     } else {
 
+        imgQuadrado.style.transition = '250ms'
+
         var b = Number(base.value) 
         b *= 10
 
-        let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
-        let heightQuadrado = parseInt(imgQuadrado.style.height, 10)
+        if (b >= 200) {
 
-        let resQuadrado = b + widthQuadrado
+            let valorMaximo = 380
 
-        imgQuadrado.style.transition = '250ms'
+            imgQuadrado.style.width = valorMaximo + 'px'
+            imgQuadrado.style.height = valorMaximo + 'px'
 
-        imgQuadrado.style.width = resQuadrado + 'px'
-        imgQuadrado.style.height = resQuadrado + 'px'
-        
+        } else {
+
+            let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+
+            let resQuadrado = b + widthQuadrado
+
+            imgQuadrado.style.width = resQuadrado + 'px'
+            imgQuadrado.style.height = resQuadrado + 'px'
+
+            setTimeout(function () {
+
+                imgQuadrado.style.animation = '2s resetRotateForma'
+
+            }, 500)
+
+        }
+
     }
 
 }
