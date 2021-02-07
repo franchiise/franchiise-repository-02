@@ -4,6 +4,12 @@
 
 }
 
+html {
+
+    overflow: hidden;
+
+}
+
 h3 {
 
     font-size: 25px;
@@ -321,6 +327,8 @@ h3 {
 
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
 
+    outline: none;
+
 }
 
 #alturaForma {
@@ -334,6 +342,8 @@ h3 {
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
 
     margin-top: 0px;
+
+    outline: none;
 
 }
 

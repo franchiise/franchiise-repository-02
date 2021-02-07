@@ -28,15 +28,19 @@ function quadrado() {
     imgCirculo.style.display = 'none'
 
     imgQuadrado.setAttribute('src', 'Imagens/quadrado.png')
+
+    imgQuadrado.style.width = '200px'
+    imgQuadrado.style.height = '200px'
+
+    imgQuadrado.style.position = 'relative'
+    imgQuadrado.style.top = '-210px'
+    
+    imgQuadrado.style.margin = 'auto'
+
     imgQuadrado.style.display = 'block'
 
     forma.appendChild(imgQuadrado)
     forma.style.animation = '500ms increaseOut'
-
-    imgQuadrado.style.width = '200px'
-    imgQuadrado.style.position = 'relative'
-    imgQuadrado.style.top = '-210px'
-    imgQuadrado.style.margin = 'auto'
 
     check.style.marginTop = '15px'
     check.style.opacity = '1'
@@ -50,28 +54,8 @@ function quadrado() {
 
     medidas.style.marginTop = '-66px'
 
-}
-
-function calcular() {
-
-    if (base.value.length == 0 || altura.value.length == 0) {
-
-        alert('[ERRO] Preencha todos as medidas')
-
-    } else {
-
-        var b = Number(base.value) 
-        var h = Number(altura.value)
-        
-        b *= 10
-        h *= 10
-
-        var widthQuadrado = parseInt(imgQuadrado.style.width, 10)
-        var heightQuadrado = parseInt(imgQuadrado.style.height, 10)
-
-        imgQuadrado
-        
-    }
+    base.disabled = false
+    altura.disabled = false
 
 }
 
@@ -88,15 +72,19 @@ function retangulo() {
     imgCirculo.style.display = 'none'
     
     imgRetangulo.setAttribute('src', 'Imagens/retangulo.png')
-    imgRetangulo.style.display = 'block'
-
-    forma.appendChild(imgRetangulo)
-    forma.style.animation = '500ms increaseOut'
 
     imgRetangulo.style.width = '250px'
+    imgRetangulo.style.height = '180px'
+
     imgRetangulo.style.position = 'relative'
     imgRetangulo.style.top = '-210px'
+    
     imgRetangulo.style.margin = 'auto'
+
+    imgRetangulo.style.display = 'block'
+    
+    forma.appendChild(imgRetangulo)
+    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '83px'
     check.style.opacity = '1'
@@ -108,7 +96,7 @@ function retangulo() {
 
     }, 500)
 
-    medidas.style.marginTop = '-33px'
+    medidas.style.marginTop = '-46px'
 
 }
 
@@ -125,15 +113,19 @@ function triangulo() {
     imgCirculo.style.display = 'none'
 
     imgTriangulo.setAttribute('src', 'Imagens/triangulo.png')
+
+    imgTriangulo.style.width = '200px'
+    imgTriangulo.style.height = '180px'
+
+    imgTriangulo.style.position = 'relative'
+    imgTriangulo.style.top = '-210px'
+
+    imgTriangulo.style.margin = 'auto'
+    
     imgTriangulo.style.display = 'block'
 
     forma.appendChild(imgTriangulo)
     forma.style.animation = '500ms increaseOut'
-
-    imgTriangulo.style.width = '200px'
-    imgTriangulo.style.position = 'relative'
-    imgTriangulo.style.top = '-210px'
-    imgTriangulo.style.margin = 'auto'
 
     check.style.marginTop = '143px'
     check.style.opacity = '1'
@@ -145,7 +137,7 @@ function triangulo() {
 
     }, 500)
 
-    medidas.style.marginTop = '-40px'
+    medidas.style.marginTop = '-46px'
 
 }
 
@@ -162,15 +154,18 @@ function losango() {
     imgCirculo.style.display = 'none'
 
     imgLosango.setAttribute('src', 'Imagens/losango.png')
+
+    imgLosango.style.width = '200px'
+    
+    imgLosango.style.position = 'relative'
+    imgLosango.style.top = '-215px'
+    
+    imgLosango.style.margin = 'auto'
+
     imgLosango.style.display = 'block'
 
     forma.appendChild(imgLosango)
     forma.style.animation = '500ms increaseOut'
-
-    imgLosango.style.width = '200px'
-    imgLosango.style.position = 'relative'
-    imgLosango.style.top = '-210px'
-    imgLosango.style.margin = 'auto'
 
     check.style.marginTop = '200px'
     check.style.opacity = '1'
@@ -182,7 +177,7 @@ function losango() {
 
     }, 500)
 
-    medidas.style.marginTop = '-133px'
+    medidas.style.marginTop = '-133.5px'
 
 }
 
@@ -199,15 +194,19 @@ function trapezio() {
     imgCirculo.style.display = 'none'
 
     imgTrapezio.setAttribute('src', 'Imagens/trapezio.png')
+
+    imgTrapezio.style.width = '250px'
+    imgTrapezio.style.height = '150px'
+
+    imgTrapezio.style.position = 'relative'
+    imgTrapezio.style.top = '-200px'
+    
+    imgTrapezio.style.margin = 'auto'
+    
     imgTrapezio.style.display = 'block'
 
     forma.appendChild(imgTrapezio)
     forma.style.animation = '500ms increaseOut'
-
-    imgTrapezio.style.width = '200px'
-    imgTrapezio.style.position = 'relative'
-    imgTrapezio.style.top = '-200px'
-    imgTrapezio.style.margin = 'auto'
 
     check.style.marginTop = '280px'
     check.style.opacity = '1'
@@ -219,7 +218,7 @@ function trapezio() {
 
     }, 500)
 
-    medidas.style.marginTop = '1px'
+    medidas.style.marginTop = '-16px'
 
 }
 
@@ -236,20 +235,48 @@ function circulo() {
     imgTrapezio.style.display = 'none'
 
     imgCirculo.setAttribute('src', 'Imagens/circulo.png')
+
+    imgCirculo.style.width = '200px'
+
+    imgCirculo.style.position = 'relative'
+    imgCirculo.style.top = '-210px'
+    
+    imgCirculo.style.margin = 'auto'
+    
     imgCirculo.style.display = 'block'
 
     forma.appendChild(imgCirculo)
     forma.style.animation = '500ms increaseOut'
 
-    imgCirculo.style.width = '200px'
-    imgCirculo.style.position = 'relative'
-    imgCirculo.style.top = '-210px'
-    imgCirculo.style.margin = 'auto'
-
     check.style.marginTop = '348px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
-    medidas.style.marginTop = '-65px'
+    medidas.style.marginTop = '-65.5px'
+
+}
+
+function calcular() {
+
+    if (base.value.length == 0 || altura.value.length == 0) {
+
+        alert('[ERRO] Preencha todos as medidas')
+
+    } else {
+
+        var b = Number(base.value) 
+        b *= 10
+
+        let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+        let heightQuadrado = parseInt(imgQuadrado.style.height, 10)
+
+        let resQuadrado = b + widthQuadrado
+
+        imgQuadrado.style.transition = '250ms'
+
+        imgQuadrado.style.width = resQuadrado + 'px'
+        imgQuadrado.style.height = resQuadrado + 'px'
+        
+    }
 
 }
