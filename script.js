@@ -244,29 +244,69 @@ function calcular() {
     } else {
 
         imgQuadrado.style.transition = '250ms'
+        imgRetangulo.style.transition = '250ms'
+        imgTriangulo.style.transition = '250ms'
+        
+        imgLosango.style.transition = '250ms'
+        imgTrapezio.style.transition = '250ms'
+        imgCirculo.style.transition = '250ms'
 
         var b = Number(base.value) 
+        var h = Number(altura.value) 
+        
         b *= 10
+        h *= 10
 
         if (b >= 200) {
 
-            let valorMaximo = 380
+            let valorMaximoWidthQuadrado = 380
+            
+            let valorMaximoWidthRetangulo = 520
+            let valorMaximoHeightRetangulo = 320 
 
-            imgQuadrado.style.width = valorMaximo + 'px'
-            imgQuadrado.style.height = valorMaximo + 'px'  
+            let valorMaximoWidthTriangulo = 400
+            let valorMaximoHeightTriangulo = 380
+
+            imgQuadrado.style.width = valorMaximoWidthQuadrado + 'px'
+            imgQuadrado.style.height = valorMaximoWidthQuadrado + 'px'
+            
+            imgRetangulo.style.width = valorMaximoWidthRetangulo + 'px'
+            imgRetangulo.style.height = valorMaximoHeightRetangulo + 'px'
+
+            imgTriangulo.style.width = valorMaximoWidthTriangulo + 'px'
+            imgTriangulo.style.height = valorMaximoHeightTriangulo + 'px'
 
         } else {
 
             let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+            let widthRetangulo = parseInt(imgRetangulo.style.width, 10)
+            let widthTriangulo = parseInt(imgRetangulo.style.width, 10)
 
-            let resQuadrado = b + widthQuadrado
+            let heightQuadrado = parseInt(imgQuadrado.style.height, 10)
+            let heightRetangulo = parseInt(imgRetangulo.style.height, 10)
+            let heightTriangulo = parseInt(imgRetangulo.style.height, 10)
 
-            imgQuadrado.style.width = resQuadrado + 'px'
-            imgQuadrado.style.height = resQuadrado + 'px'
+            let resQuadradoWidth = b + widthQuadrado
+            let resRetanguloWidth = b + widthRetangulo
+            let resTrianguloWidth = b + widthTriangulo
+
+            let resRetanguloHeight = b + widthRetangulo
+            let resTrianguloHeight = b + widthTriangulo
+
+            imgQuadrado.style.width = resQuadradoWidth + 'px'
+            imgQuadrado.style.height = resQuadradoWidth + 'px'
+
+            imgRetangulo.style.width = resRetanguloWidth + 'px'
+            imgRetangulo.style.height = resRetanguloHeight + 'px'
+
+            imgTriangulo.style.width = resTrianguloWidth + 'px'
+            imgTriangulo.style.height = resTrianguloHeight + 'px'
 
         }
 
         imgQuadrado.style.animation = '2s resetRotateForma'
+        imgRetangulo.style.animation = '2s resetRotateForma'
+        imgTriangulo.style.animation = '2s resetRotateForma'
 
         base.value = ''
         altura.value = ''

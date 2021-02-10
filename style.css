@@ -324,8 +324,11 @@ h3 {
 #medidas {
 
     position: absolute;
-    top: 610px;
-    left: 25px;
+    top: 87.5%;
+    left: 7.5%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
 }
 
