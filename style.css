@@ -91,12 +91,6 @@ h3 {
 
     }
 
-    @keyframes rotate-quadrado {
-
-        100% {transform: rotate(360deg);}
-
-    }
-
 #line-01 {
 
     background-color: black;
@@ -297,10 +291,21 @@ h3 {
 
     }
 
+#forma {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
     @keyframes increaseOut {
 
-        0% {transform: scale(0);}
-        100% {transform: scale(1);}
+        from {transform: scale(0);}
+        to {transform: scale(1);}
 
     }
 
@@ -523,12 +528,6 @@ button:hover {
         top: -85px;
             
         margin-left: 233px;
-
-    }
-
-    #forma {
-
-        margin-top: 300px;
 
     }
 

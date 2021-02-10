@@ -32,15 +32,11 @@ function quadrado() {
     imgQuadrado.style.width = '200px'
     imgQuadrado.style.height = '200px'
 
-    imgQuadrado.style.position = 'relative'
-    imgQuadrado.style.top = '-193px'
-    
-    imgQuadrado.style.margin = 'auto'
+    imgQuadrado.style.display = 'block'
 
-    imgQuadrado.style.display = 'flex'
+    imgQuadrado.style.animation = '500ms increaseOut'
 
     forma.appendChild(imgQuadrado)
-    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '15px'
     check.style.opacity = '1'
@@ -74,15 +70,11 @@ function retangulo() {
     imgRetangulo.style.width = '250px'
     imgRetangulo.style.height = '180px'
 
-    imgRetangulo.style.position = 'relative'
-    imgRetangulo.style.top = '-210px'
-    
-    imgRetangulo.style.margin = 'auto'
-
     imgRetangulo.style.display = 'block'
-    
+
+    imgRetangulo.style.animation = '500ms increaseOut'
+
     forma.appendChild(imgRetangulo)
-    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '83px'
     check.style.opacity = '1'
@@ -116,16 +108,12 @@ function triangulo() {
     imgTriangulo.style.width = '200px'
     imgTriangulo.style.height = '180px'
 
-    imgTriangulo.style.position = 'relative'
-    imgTriangulo.style.top = '-210px'
-
-    imgTriangulo.style.margin = 'auto'
-    
     imgTriangulo.style.display = 'block'
 
-    forma.appendChild(imgTriangulo)
-    forma.style.animation = '500ms increaseOut'
+    imgTriangulo.style.animation = '500ms increaseOut'
 
+    forma.appendChild(imgTriangulo)
+    
     check.style.marginTop = '143px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
@@ -156,16 +144,12 @@ function losango() {
     imgLosango.setAttribute('src', 'Imagens/losango.png')
 
     imgLosango.style.width = '200px'
-    
-    imgLosango.style.position = 'relative'
-    imgLosango.style.top = '-215px'
-    
-    imgLosango.style.margin = 'auto'
 
     imgLosango.style.display = 'block'
 
+    imgLosango.style.animation = '500ms increaseOut'
+
     forma.appendChild(imgLosango)
-    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '200px'
     check.style.opacity = '1'
@@ -198,16 +182,12 @@ function trapezio() {
 
     imgTrapezio.style.width = '250px'
     imgTrapezio.style.height = '150px'
-
-    imgTrapezio.style.position = 'relative'
-    imgTrapezio.style.top = '-200px'
-    
-    imgTrapezio.style.margin = 'auto'
     
     imgTrapezio.style.display = 'block'
 
+    imgTrapezio.style.animation = '500ms increaseOut'
+
     forma.appendChild(imgTrapezio)
-    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '280px'
     check.style.opacity = '1'
@@ -239,16 +219,12 @@ function circulo() {
     imgCirculo.setAttribute('src', 'Imagens/circulo.png')
 
     imgCirculo.style.width = '200px'
-
-    imgCirculo.style.position = 'relative'
-    imgCirculo.style.top = '-210px'
-    
-    imgCirculo.style.margin = 'auto'
     
     imgCirculo.style.display = 'block'
 
+    imgCirculo.style.animation = '500ms increaseOut'
+
     forma.appendChild(imgCirculo)
-    forma.style.animation = '500ms increaseOut'
 
     check.style.marginTop = '348px'
     check.style.opacity = '1'
@@ -277,9 +253,7 @@ function calcular() {
             let valorMaximo = 380
 
             imgQuadrado.style.width = valorMaximo + 'px'
-            imgQuadrado.style.height = valorMaximo + 'px'
-
-            imgQuadrado.style.top = '-285px'    
+            imgQuadrado.style.height = valorMaximo + 'px'  
 
         } else {
 
