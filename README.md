@@ -79,4 +79,6 @@ Para calcular a área de um losango, é necessário dividir a figura traçando a
 
 Fontes:
 
-https://www.coc.com.br/blog/soualuno/matematica/como-calcular-a-area-de-figuras-planas
+https://www.coc.com.br/blog/soualuno/matematica/como-calcular-a-area-de-figuras-planas]
+
+https://www.todamateria.com.br/area-e-perimetro/
