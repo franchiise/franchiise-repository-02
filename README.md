@@ -12,9 +12,9 @@ O quadrado é um quadrilátero regular que possui quatro lados congruentes, isto
 
 ![](https://www.coc.com.br/gallery/repository/uploads/blog/2019/janeiro/area-de-figuras-planas/1.jpg)
 
-A = L²
-A: Área
-L: Lado
+* A = L²
+* A: Área
+* L: Lado
 
 # Como calcular a área de um retângulo ■■:
 
