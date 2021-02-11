@@ -76,3 +76,7 @@ Para calcular a área de um losango, é necessário dividir a figura traçando a
 * A: Área
 * 𝜋: Constante Pi (3,14)
 * r: Raio
+
+Fonte:
+
+> https://www.coc.com.br/blog/soualuno/matematica/como-calcular-a-area-de-figuras-planas
