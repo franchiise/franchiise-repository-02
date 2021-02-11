@@ -1,6 +1,6 @@
 # Skulito 📁 | Cálculo - Área de Figura Geométrica 📐
 
-➜ As *áreas das figuras* planas medem o tamanho da superfície da figura. Desse modo, podemos pensar que quanto maior a superfície da figura, maior será sua área.
+➜ As *áreas das figuras planas* medem o tamanho da superfície da figura. Desse modo, podemos pensar que quanto maior a superfície da figura, maior será sua área.
 
 ➜ No cálculo da área de determinada figura, existe um meio de calcular sua área, geralmente, para encontrar a área de uma figura basta multiplicar a base (b) pela altura (h).
    
@@ -68,7 +68,7 @@ Para calcular a área de um losango, é necessário dividir a figura traçando a
 
 ## Como calcular a área de um círculo (○):
 
-O círculo é uma figura plana que também pode receber o nome de disco. Seu raio é uma medida muito importante e representa a distância entre seu ponto central e a sua extremidade. Para calcular a sua área, é necessário conhecer tal valor.
+➥ O círculo é uma figura plana que também pode receber o nome de disco. Seu raio é uma medida muito importante e representa a distância entre seu ponto central e a sua extremidade. Para calcular a sua área, é necessário conhecer tal valor.
 
 ![](https://www.coc.com.br/gallery/repository/uploads/blog/2019/janeiro/area-de-figuras-planas/9.jpg)
 
