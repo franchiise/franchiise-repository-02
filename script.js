@@ -239,7 +239,7 @@ function calcular() {
 
     if (base.value.length == 0 || altura.value.length == 0) {
 
-        alert('[ERRO] Preencha todos as medidas')
+        alert('[ERRO] Preencha todos os dados')
 
     } else {
 
@@ -254,8 +254,8 @@ function calcular() {
         var b = Number(base.value) 
         var h = Number(altura.value) 
         
-        b *= 10
-        h *= 10
+        b = b * 10
+        h = h * 10
 
         if (b >= 200) {
 
@@ -282,10 +282,10 @@ function calcular() {
             let resQuadradoWidth = b + widthQuadrado
 
             let resRetanguloWidth = b + widthRetangulo
-            let resRetanguloHeight = b + heightRetangulo
+            let resRetanguloHeight = h + heightRetangulo
 
             let resTrianguloWidth = b + widthTriangulo
-            let resTrianguloHeight = b + heightTriangulo
+            let resTrianguloHeight = h + heightTriangulo
 
             // ------------------------- // ------------------------- //
 
