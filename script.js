@@ -308,6 +308,9 @@ function calcular() {
         base.value = ''
         altura.value = ''
 
+        b.value = undefined
+        h.value = undefined
+
     }
 
 }
