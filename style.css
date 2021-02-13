@@ -534,4 +534,15 @@ button:hover {
 
     }
 
+    #medidas {
+
+        position: absolute;
+        top: 87.5%;
+        left: 28%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    
+    }
+
 }

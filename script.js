@@ -275,7 +275,7 @@ function calcular() {
         b = b * 3.780
         h = h * 3.780
 
-        if (b >= 200) {
+        if (b >= 200 || h >= 200) {
 
             imgQuadrado.style.width = 380 + 'px'
             imgQuadrado.style.height = 380 + 'px'
