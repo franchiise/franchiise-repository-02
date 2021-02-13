@@ -254,8 +254,8 @@ function calcular() {
         var b = Number(base.value) 
         var h = Number(altura.value) 
         
-        b = b * 10
-        h = h * 10
+        b = b * 3.780
+        h = h * 3.780
 
         if (b >= 200) {
 
@@ -307,9 +307,6 @@ function calcular() {
 
         base.value = ''
         altura.value = ''
-
-        b.value = undefined
-        h.value = undefined
 
     }
 
