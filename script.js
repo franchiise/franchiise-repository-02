@@ -48,6 +48,9 @@ function quadrado() {
 
     }, 500)
 
+    base.value = ''
+    altura.value = ''
+
     base.disabled = false
     altura.disabled = false
 
@@ -85,6 +88,9 @@ function retangulo() {
         imgRetangulo.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    base.value = ''
+    altura.value = ''
 
     base.disabled = false
     altura.disabled = false
@@ -124,6 +130,9 @@ function triangulo() {
 
     }, 500)
 
+    base.value = ''
+    altura.value = ''
+
     base.disabled = false
     altura.disabled = false
 
@@ -160,6 +169,9 @@ function losango() {
         imgLosango.style.animation = '360s rotateForma infinite'
 
     }, 500)
+
+    base.value = ''
+    altura.value = ''
 
     base.disabled = false
     altura.disabled = false
@@ -199,6 +211,9 @@ function trapezio() {
 
     }, 500)
 
+    base.value = ''
+    altura.value = ''
+
     base.disabled = false
     altura.disabled = false
 
@@ -229,6 +244,9 @@ function circulo() {
     check.style.marginTop = '348px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
+
+    base.value = ''
+    altura.value = ''
 
     base.disabled = false
     altura.disabled = false
@@ -270,13 +288,13 @@ function calcular() {
 
         } else {
 
-            let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+            let widthQuadrado = parseInt(imgQuadrado.style.width, 0)
            
-            let widthRetangulo = parseInt(imgRetangulo.style.width, 10)
-            let heightRetangulo = parseInt(imgRetangulo.style.height, 10)
+            let widthRetangulo = parseInt(imgRetangulo.style.width, 0)
+            let heightRetangulo = parseInt(imgRetangulo.style.height, 0)
 
-            let widthTriangulo = parseInt(imgRetangulo.style.width, 10)
-            let heightTriangulo = parseInt(imgRetangulo.style.height, 10)
+            let widthTriangulo = parseInt(imgRetangulo.style.width, 0)
+            let heightTriangulo = parseInt(imgRetangulo.style.height, 0)
 
             // ------------------------- // ------------------------- //
 
@@ -305,8 +323,8 @@ function calcular() {
         imgRetangulo.style.animation = '2s resetRotateForma'
         imgTriangulo.style.animation = '2s resetRotateForma'
 
-        base.value = ''
-        altura.value = ''
+        base.disabled = 'true'
+        altura.disabled = 'true'
 
     }
 
