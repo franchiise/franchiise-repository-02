@@ -15,6 +15,8 @@ let medidas = document.querySelector('#medidas')
 let base = document.querySelector('#baseForma')
 let altura = document.querySelector('#alturaForma')
 
+let button = document.querySelector('#button')
+
 function quadrado() {
 
     imgRetangulo.style.display = 'none'
@@ -53,6 +55,8 @@ function quadrado() {
 
     base.disabled = false
     altura.disabled = false
+
+    button.disabled = false
 
 }
 
@@ -95,6 +99,8 @@ function retangulo() {
     base.disabled = false
     altura.disabled = false
 
+    button.disabled = false
+
 }
 
 function triangulo() {
@@ -136,6 +142,8 @@ function triangulo() {
     base.disabled = false
     altura.disabled = false
 
+    button.disabled = false
+
 }
 
 function losango() {
@@ -175,6 +183,8 @@ function losango() {
 
     base.disabled = false
     altura.disabled = false
+
+    button.disabled = false
 
 }
 
@@ -217,6 +227,8 @@ function trapezio() {
     base.disabled = false
     altura.disabled = false
 
+    button.disabled = false
+
 }
 
 function circulo() {
@@ -250,6 +262,8 @@ function circulo() {
 
     base.disabled = false
     altura.disabled = false
+
+    button.disabled = false
 
 }
 
@@ -317,8 +331,6 @@ function calcular() {
             imgTriangulo.style.width = resTrianguloWidth + 'px'
             imgTriangulo.style.height = resTrianguloHeight + 'px'
 
-            break
-
         }
 
         imgQuadrado.style.animation = '2s resetRotateForma'
@@ -327,6 +339,8 @@ function calcular() {
 
         base.disabled = 'true'
         altura.disabled = 'true'
+
+        button.disabled = true
 
     }
 
