@@ -161,6 +161,7 @@ function losango() {
     imgLosango.setAttribute('src', 'Imagens/losango.png')
 
     imgLosango.style.width = '200px'
+    imgLosango.style.height = '300px'
 
     imgLosango.style.display = 'block'
 
@@ -289,16 +290,25 @@ function calcular() {
         b = b * 3.780
         h = h * 3.780
 
-        if (b >= 200 || h >= 200) {
+        if (b >= 300 || h >= 300) {
 
             imgQuadrado.style.width = 380 + 'px'
             imgQuadrado.style.height = 380 + 'px'
             
-            imgRetangulo.style.width = 520 + 'px'
-            imgRetangulo.style.height = 520 + 'px'
+            imgRetangulo.style.width = 450 + 'px'
+            imgRetangulo.style.height = 350 + 'px'
 
             imgTriangulo.style.width = 400 + 'px'
             imgTriangulo.style.height = 380 + 'px'
+
+            imgLosango.style.width = 400 + 'px'
+            imgLosango.style.height = 580 + 'px'
+
+            imgTrapezio.style.width = 400 + 'px'
+            imgTrapezio.style.height = 580 + 'px'
+
+            imgCirculo.style.width = 400 + 'px'
+            imgCirculo.style.height = 580 + 'px'
 
         } else {
 
@@ -307,8 +317,16 @@ function calcular() {
             let widthRetangulo = parseInt(imgRetangulo.style.width, 0)
             let heightRetangulo = parseInt(imgRetangulo.style.height, 0)
 
-            let widthTriangulo = parseInt(imgRetangulo.style.width, 0)
-            let heightTriangulo = parseInt(imgRetangulo.style.height, 0)
+            let widthTriangulo = parseInt(imgTriangulo.style.width, 0)
+            let heightTriangulo = parseInt(imgTriangulo.style.height, 0)
+
+            let widthLosango = parseInt(imgLosango.style.width, 0)
+            let heightLosango = parseInt(imgLosango.style.height, 0)
+
+            let widthTrapezio = parseInt(imgTrapezio.style.width, 0)
+            let heightTrapezio = parseInt(imgTrapezio.style.height, 0)
+
+            let widthCirculo = parseInt(imgCirculo.style.width, 0)
 
             // ------------------------- // ------------------------- //
 
@@ -319,6 +337,14 @@ function calcular() {
 
             let resTrianguloWidth = b + widthTriangulo
             let resTrianguloHeight = h + heightTriangulo
+
+            let resLosangoWidth = b + widthLosango
+            let resLosangoHeight = h + heightLosango
+
+            let resTrapezioWidth = b + widthTrapezio
+            let resTrapezioHeight = h + heightTrapezio
+
+            let resCirculoWidth = b + widthCirculo
 
             // ------------------------- // ------------------------- //
 
@@ -331,14 +357,27 @@ function calcular() {
             imgTriangulo.style.width = resTrianguloWidth + 'px'
             imgTriangulo.style.height = resTrianguloHeight + 'px'
 
+            imgLosango.style.width = resLosangoWidth + 'px'
+            imgLosango.style.height = resLosangoHeight + 'px'
+
+            imgTrapezio.style.width = resTrapezioWidth + 'px'
+            imgTrapezio.style.height = resTrapezioHeight + 'px'
+
+            imgCirculo.style.width = resCirculoWidth + 'px'
+            imgCirculo.style.height = resCirculoHeight + 'px'
+
         }
 
         imgQuadrado.style.animation = '2s resetRotateForma'
         imgRetangulo.style.animation = '2s resetRotateForma'
         imgTriangulo.style.animation = '2s resetRotateForma'
 
-        base.disabled = 'true'
-        altura.disabled = 'true'
+        imgLosango.style.animation = '2s resetRotateForma'
+        imgTrapezio.style.animation = '2s resetRotateForma'
+        imgCirculo.style.animation = '2s resetRotateForma'
+
+        base.disabled = true
+        altura.disabled = true
 
         button.disabled = true
 
