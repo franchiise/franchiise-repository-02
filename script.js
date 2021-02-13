@@ -247,6 +247,7 @@ function circulo() {
     imgCirculo.setAttribute('src', 'Imagens/circulo.png')
 
     imgCirculo.style.width = '200px'
+    imgCirculo.style.height = '200px'
     
     imgCirculo.style.display = 'block'
 
@@ -290,6 +291,19 @@ function calcular() {
         b = b * 3.780
         h = h * 3.780
 
+        imgQuadrado.style.animation = '2s resetRotateForma'
+        imgRetangulo.style.animation = '2s resetRotateForma'
+        imgTriangulo.style.animation = '2s resetRotateForma'
+
+        imgLosango.style.animation = '2s resetRotateForma'
+        imgTrapezio.style.animation = '2s resetRotateForma'
+        imgCirculo.style.animation = '2s resetRotateForma'
+
+        base.disabled = true
+        altura.disabled = true
+
+        button.disabled = true
+
         if (b >= 300 || h >= 300) {
 
             imgQuadrado.style.width = 380 + 'px'
@@ -307,8 +321,8 @@ function calcular() {
             imgTrapezio.style.width = 400 + 'px'
             imgTrapezio.style.height = 580 + 'px'
 
-            imgCirculo.style.width = 400 + 'px'
-            imgCirculo.style.height = 580 + 'px'
+            imgCirculo.style.width = 450 + 'px'
+            imgCirculo.style.height = 450 + 'px'
 
         } else {
 
@@ -364,22 +378,9 @@ function calcular() {
             imgTrapezio.style.height = resTrapezioHeight + 'px'
 
             imgCirculo.style.width = resCirculoWidth + 'px'
-            imgCirculo.style.height = resCirculoHeight + 'px'
+            imgCirculo.style.height = resCirculoWidth + 'px'
 
         }
-
-        imgQuadrado.style.animation = '2s resetRotateForma'
-        imgRetangulo.style.animation = '2s resetRotateForma'
-        imgTriangulo.style.animation = '2s resetRotateForma'
-
-        imgLosango.style.animation = '2s resetRotateForma'
-        imgTrapezio.style.animation = '2s resetRotateForma'
-        imgCirculo.style.animation = '2s resetRotateForma'
-
-        base.disabled = true
-        altura.disabled = true
-
-        button.disabled = true
 
     }
 
