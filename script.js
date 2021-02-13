@@ -317,6 +317,8 @@ function calcular() {
             imgTriangulo.style.width = resTrianguloWidth + 'px'
             imgTriangulo.style.height = resTrianguloHeight + 'px'
 
+            break
+
         }
 
         imgQuadrado.style.animation = '2s resetRotateForma'
