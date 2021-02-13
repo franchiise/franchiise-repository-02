@@ -271,10 +271,11 @@ function calcular() {
         } else {
 
             let widthQuadrado = parseInt(imgQuadrado.style.width, 10)
+           
             let widthRetangulo = parseInt(imgRetangulo.style.width, 10)
-            let widthTriangulo = parseInt(imgRetangulo.style.width, 10)
-
             let heightRetangulo = parseInt(imgRetangulo.style.height, 10)
+
+            let widthTriangulo = parseInt(imgRetangulo.style.width, 10)
             let heightTriangulo = parseInt(imgRetangulo.style.height, 10)
 
             // ------------------------- // ------------------------- //
