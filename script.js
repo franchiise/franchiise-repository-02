@@ -318,13 +318,13 @@ function calcular() {
             imgLosango.style.width = 400 + 'px'
             imgLosango.style.height = 580 + 'px'
 
-            imgTrapezio.style.width = 400 + 'px'
-            imgTrapezio.style.height = 580 + 'px'
+            imgTrapezio.style.width = 500 + 'px'
+            imgTrapezio.style.height = 350 + 'px'
 
             imgCirculo.style.width = 450 + 'px'
             imgCirculo.style.height = 450 + 'px'
 
-        } else {
+        } else {    
 
             let widthQuadrado = parseInt(imgQuadrado.style.width, 0)
            
