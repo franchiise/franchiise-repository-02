@@ -534,14 +534,43 @@ button:hover {
 
     }
 
-    #medidas {
-
+    #forma {
+    
         position: absolute;
-        top: 87.5%;
-        left: 28%;
-
+        top: 48%;
+        left: 50%;
+    
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+    
+    }
+
+    #medidas {
+
+        margin-top: -10px;
+        margin-left: 80px;
+    
+    }
+
+}
+
+@media (min-width: 768px) {
+    
+    #medidas {
+
+        margin-top: 20px;
+        margin-left: 70px;
+    
+    }
+
+}
+
+@media (min-width: 1024px) {
+    
+    #medidas {
+
+        margin-top: 20px;
+        margin-left: 70px;
     
     }
 
