@@ -324,7 +324,7 @@ h3 {
 #medidas {
 
     position: absolute;
-    top: 87.5%;
+    top: 87%;
     left: 7.5%;
 
     -webkit-transform: translate(-50%, -50%);
@@ -547,31 +547,13 @@ button:hover {
 
     #medidas {
 
-        margin-top: -10px;
-        margin-left: 80px;
+        position: absolute;
+        top: 85%;
+        left: 32%;
     
-    }
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
 
-}
-
-@media (min-width: 768px) {
-    
-    #medidas {
-
-        margin-top: 20px;
-        margin-left: 70px;
-    
-    }
-
-}
-
-@media (min-width: 1024px) {
-    
-    #medidas {
-
-        margin-top: 20px;
-        margin-left: 70px;
-    
     }
 
 }
