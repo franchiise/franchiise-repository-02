@@ -56,7 +56,6 @@ function quadrado() {
     altura.value = ''
 
     base.disabled = false
-    altura.disabled = false
 
     button.disabled = false
  
@@ -66,7 +65,7 @@ function quadrado() {
         imgQuadrado.style.height = '150px'
 
     } 
-
+    
 }
 
 function retangulo() {
