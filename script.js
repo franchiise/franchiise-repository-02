@@ -17,6 +17,8 @@ let altura = document.querySelector('#alturaForma')
 
 let button = document.querySelector('#button')
 
+var n = window.matchMedia('(max-width: 540px)')
+
 function quadrado() {
 
     imgRetangulo.style.display = 'none'
@@ -57,6 +59,13 @@ function quadrado() {
     altura.disabled = false
 
     button.disabled = false
+ 
+    if (n.matches == true) {
+
+        imgQuadrado.style.width = '150px'
+        imgQuadrado.style.height = '150px'
+
+    } 
 
 }
 
@@ -101,6 +110,13 @@ function retangulo() {
 
     button.disabled = false
 
+    if (n.matches == true) {
+
+        imgRetangulo.style.width = '200px'
+        imgRetangulo.style.height = '130px'
+
+    } 
+
 }
 
 function triangulo() {
@@ -143,6 +159,13 @@ function triangulo() {
     altura.disabled = false
 
     button.disabled = false
+
+    if (n.matches == true) {
+
+        imgTriangulo.style.width = '160px'
+        imgTriangulo.style.height = '140px'
+
+    } 
 
 }
 
@@ -187,6 +210,13 @@ function losango() {
 
     button.disabled = false
 
+    if (n.matches == true) {
+
+        imgLosango.style.width = '150px'
+        imgLosango.style.height = '250px'
+
+    } 
+
 }
 
 function trapezio() {
@@ -230,6 +260,13 @@ function trapezio() {
 
     button.disabled = false
 
+    if (n.matches == true) {
+
+        imgTrapezio.style.width = '200px'
+        imgTrapezio.style.height = '125px'
+
+    } 
+
 }
 
 function circulo() {
@@ -266,6 +303,13 @@ function circulo() {
     altura.disabled = false
 
     button.disabled = false
+
+    if (n.matches == true) {
+
+        imgCirculo.style.width = '150px'
+        imgCirculo.style.height = '150px'
+
+    } 
 
 }
 
@@ -323,6 +367,28 @@ function calcular() {
 
             imgCirculo.style.width = 450 + 'px'
             imgCirculo.style.height = 450 + 'px'
+
+            if (n.matches == true) {
+
+                imgQuadrado.style.width = 200 + 'px'
+                imgQuadrado.style.height = 200 + 'px'
+                    
+                imgRetangulo.style.width = 250 + 'px'
+                imgRetangulo.style.height = 150 + 'px'
+        
+                imgTriangulo.style.width = 200 + 'px'
+                imgTriangulo.style.height = 180 + 'px'
+        
+                imgLosango.style.width = 180 + 'px'
+                imgLosango.style.height = 300 + 'px'
+        
+                imgTrapezio.style.width = 220 + 'px'
+                imgTrapezio.style.height = 130 + 'px'
+        
+                imgCirculo.style.width = 220 + 'px'
+                imgCirculo.style.height = 220 + 'px'
+        
+            } 
 
         } else {    
 
