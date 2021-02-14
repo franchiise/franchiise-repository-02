@@ -184,7 +184,7 @@ function losango() {
     imgLosango.setAttribute('src', 'Imagens/losango.png')
 
     imgLosango.style.width = '200px'
-    imgLosango.style.height = '300px'
+    imgLosango.style.height = '280px'
 
     imgLosango.style.display = 'block'
 
@@ -212,8 +212,8 @@ function losango() {
 
     if (n.matches == true) {
 
-        imgLosango.style.width = '150px'
-        imgLosango.style.height = '250px'
+        imgLosango.style.width = '140px'
+        imgLosango.style.height = '220px'
 
     } 
 
@@ -348,7 +348,7 @@ function calcular() {
 
         button.disabled = true
 
-        if (b >= 300 || h >= 300) {
+        if (b >= 75 || h >= 75) {
 
             imgQuadrado.style.width = 380 + 'px'
             imgQuadrado.style.height = 380 + 'px'
@@ -370,23 +370,23 @@ function calcular() {
 
             if (n.matches == true) {
 
-                imgQuadrado.style.width = 200 + 'px'
-                imgQuadrado.style.height = 200 + 'px'
+                imgQuadrado.style.width = 190 + 'px'
+                imgQuadrado.style.height = 190 + 'px'
                     
-                imgRetangulo.style.width = 250 + 'px'
-                imgRetangulo.style.height = 150 + 'px'
+                imgRetangulo.style.width = 240 + 'px'
+                imgRetangulo.style.height = 170 + 'px'
         
-                imgTriangulo.style.width = 200 + 'px'
-                imgTriangulo.style.height = 180 + 'px'
+                imgTriangulo.style.width = 210 + 'px'
+                imgTriangulo.style.height = 190 + 'px'
         
-                imgLosango.style.width = 180 + 'px'
-                imgLosango.style.height = 300 + 'px'
+                imgLosango.style.width = 190 + 'px'
+                imgLosango.style.height = 270 + 'px'
         
-                imgTrapezio.style.width = 220 + 'px'
-                imgTrapezio.style.height = 130 + 'px'
+                imgTrapezio.style.width = 260 + 'px'
+                imgTrapezio.style.height = 160 + 'px'
         
-                imgCirculo.style.width = 220 + 'px'
-                imgCirculo.style.height = 220 + 'px'
+                imgCirculo.style.width = 190 + 'px'
+                imgCirculo.style.height = 190 + 'px'
         
             } 
 
