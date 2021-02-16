@@ -15,9 +15,13 @@ let medidas = document.querySelector('#medidas')
 let base = document.querySelector('#baseForma')
 let altura = document.querySelector('#alturaForma')
 
+let labelMenorBase = document.querySelector('#labelBaseMenor')
+let labelBase = document.querySelector('#labelBase')
+let labelAltura = document.querySelector('#labelAltura')
+
 let button = document.querySelector('#button')
 
-var n = window.matchMedia('(max-width: 540px)')
+var maxWidth = window.matchMedia('(max-width: 540px)')
 
 function quadrado() {
 
@@ -59,7 +63,7 @@ function quadrado() {
 
     button.disabled = false
  
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgQuadrado.style.width = '150px'
         imgQuadrado.style.height = '150px'
@@ -109,7 +113,7 @@ function retangulo() {
 
     button.disabled = false
 
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgRetangulo.style.width = '200px'
         imgRetangulo.style.height = '130px'
@@ -159,7 +163,7 @@ function triangulo() {
 
     button.disabled = false
 
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgTriangulo.style.width = '160px'
         imgTriangulo.style.height = '140px'
@@ -209,7 +213,7 @@ function losango() {
 
     button.disabled = false
 
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgLosango.style.width = '140px'
         imgLosango.style.height = '220px'
@@ -250,21 +254,29 @@ function trapezio() {
         imgTrapezio.style.animation = '360s rotateForma infinite'
 
     }, 500)
-
+    
     base.value = ''
     altura.value = ''
+
+    labelBase.innerHTML = '<strong>Base Menor: </strong>'
 
     base.disabled = false
     altura.disabled = false
 
     button.disabled = false
 
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgTrapezio.style.width = '200px'
         imgTrapezio.style.height = '125px'
 
-    } 
+        medidas.style.left = '37%'
+
+    } else if (maxWidth.matches != true) {
+
+        medidas.style.left = '8.75%'
+
+    }
 
 }
 
@@ -303,7 +315,7 @@ function circulo() {
 
     button.disabled = false
 
-    if (n.matches == true) {
+    if (maxWidth.matches == true) {
 
         imgCirculo.style.width = '150px'
         imgCirculo.style.height = '150px'
@@ -314,7 +326,7 @@ function circulo() {
 
 function calcular() {
 
-    if (base.value.length == 0 || altura.value.length == 0) {
+    if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
 
         alert('[ERRO] Preencha todos os dados')
 
@@ -367,7 +379,7 @@ function calcular() {
             imgCirculo.style.width = 450 + 'px'
             imgCirculo.style.height = 450 + 'px'
 
-            if (n.matches == true) {
+            if (maxWidth.matches == true) {
 
                 imgQuadrado.style.width = 190 + 'px'
                 imgQuadrado.style.height = 190 + 'px'
