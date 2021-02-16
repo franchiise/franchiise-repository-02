@@ -324,11 +324,33 @@ h3 {
 #medidas {
 
     position: absolute;
-    top: 87%;
+    top: 85%;
     left: 7.5%;
 
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
+}
+
+#labelBaseMenor {
+
+    display: none;
+
+}
+
+#baseMenorForma {
+
+    width: 80px;
+    height: 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.178);
+
+    outline: none;
+
+    display: none;
 
 }
 
@@ -548,7 +570,7 @@ button:hover {
     #medidas {
 
         position: absolute;
-        top: 85%;
+        top: 82%;
         left: 32%;
     
         -webkit-transform: translate(-50%, -50%);
