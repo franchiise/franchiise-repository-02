@@ -559,7 +559,7 @@ button:hover {
     #forma {
     
         position: absolute;
-        top: 48%;
+        top: 45%;
         left: 50%;
     
         -webkit-transform: translate(-50%, -50%);
@@ -570,7 +570,7 @@ button:hover {
     #medidas {
 
         position: absolute;
-        top: 82%;
+        top: 81%;
         left: 32%;
     
         -webkit-transform: translate(-50%, -50%);

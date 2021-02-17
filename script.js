@@ -437,7 +437,7 @@ function circulo() {
 
 function calcular() {
 
-    if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
+    if (base.value.length == 0 || altura.value.length == 0 || baseMenor.value.length == 0 && altura.disabled != true) {
 
         alert('[ERRO] Preencha todos os dados')
 
@@ -451,9 +451,11 @@ function calcular() {
         imgTrapezio.style.transition = '250ms'
         imgCirculo.style.transition = '250ms'
 
+        var bM = Number(baseMenor.value) 
         var b = Number(base.value) 
         var h = Number(altura.value) 
-        
+
+        bM = bM * 3.780        
         b = b * 3.780
         h = h * 3.780
 
@@ -470,49 +472,45 @@ function calcular() {
 
         button.disabled = true
 
-        if (b >= 75 || h >= 75) {
+        if (maxWidth.matches == true && b >= 75 || h >= 75 || bM >= 75) {
 
-            if (maxWidth.matches == true) {
-
-                imgQuadrado.style.width = 190 + 'px'
-                imgQuadrado.style.height = 190 + 'px'
+            imgQuadrado.style.width = 190 + 'px'
+            imgQuadrado.style.height = 190 + 'px'
                     
-                imgRetangulo.style.width = 240 + 'px'
-                imgRetangulo.style.height = 170 + 'px'
+            imgRetangulo.style.width = 240 + 'px'
+            imgRetangulo.style.height = 170 + 'px'
         
-                imgTriangulo.style.width = 210 + 'px'
-                imgTriangulo.style.height = 190 + 'px'
+            imgTriangulo.style.width = 210 + 'px'
+            imgTriangulo.style.height = 190 + 'px'
         
-                imgLosango.style.width = 190 + 'px'
-                imgLosango.style.height = 270 + 'px'
+            imgLosango.style.width = 190 + 'px'
+            imgLosango.style.height = 270 + 'px'
         
-                imgTrapezio.style.width = 260 + 'px'
-                imgTrapezio.style.height = 160 + 'px'
+            imgTrapezio.style.width = 260 + 'px'
+            imgTrapezio.style.height = 160 + 'px'
         
-                imgCirculo.style.width = 190 + 'px'
-                imgCirculo.style.height = 190 + 'px'
+            imgCirculo.style.width = 190 + 'px'
+            imgCirculo.style.height = 190 + 'px'
         
-            } else if (maxWidth.matches == false) {
+        } else if (maxWidth.matches == false && b >= 150 || h >= 150 || bM >= 150) {
 
-                imgQuadrado.style.width = 330 + 'px'
-                imgQuadrado.style.height = 330 + 'px'
-                
-                imgRetangulo.style.width = 400 + 'px'
-                imgRetangulo.style.height = 300 + 'px'
-
-                imgTriangulo.style.width = 350 + 'px'
-                imgTriangulo.style.height = 330 + 'px'
-
-                imgLosango.style.width = 350 + 'px'
-                imgLosango.style.height = 530 + 'px'
-
-                imgTrapezio.style.width = 450 + 'px'
-                imgTrapezio.style.height = 300 + 'px'
-
-                imgCirculo.style.width = 400 + 'px'
-                imgCirculo.style.height = 400 + 'px'
+            imgQuadrado.style.width = 330 + 'px'
+            imgQuadrado.style.height = 330 + 'px'
             
-            }
+            imgRetangulo.style.width = 400 + 'px'
+            imgRetangulo.style.height = 300 + 'px'
+
+            imgTriangulo.style.width = 350 + 'px'
+            imgTriangulo.style.height = 330 + 'px'
+
+            imgLosango.style.width = 350 + 'px'
+            imgLosango.style.height = 530 + 'px'
+
+            imgTrapezio.style.width = 450 + 'px'
+            imgTrapezio.style.height = 300 + 'px'
+
+            imgCirculo.style.width = 400 + 'px'
+            imgCirculo.style.height = 400 + 'px'
 
         } else {    
 
