@@ -63,9 +63,6 @@ function quadrado() {
 
     labelBaseMenor.style.display = 'none'
 
-    base.value = ''
-    altura.value = ''
-
     base.disabled = false
     altura.disabled = true
 
@@ -93,7 +90,7 @@ function quadrado() {
         medidas.style.left = '7.5%'
 
     } 
-    
+
 }
 
 function retangulo() {
@@ -576,9 +573,7 @@ function calcular() {
 
     setTimeout(function () {
 
-        res.style.display = 'block'  
-
-        res.innerHTML += `<strong>${base.value * base.value}m²</strong>` 
+        res.style.display = 'block'   
 
     }, 1000)
 
