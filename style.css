@@ -291,6 +291,42 @@ h3 {
 
     }
 
+#res {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 7%;
+    left: 11%;
+
+    display: flex;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1200ms steps(40) infinite normal, typing 10000ms steps(150) normal 1 both;
+
+    display: none;
+
+}
+
+    @keyframes cursorBlink {
+
+        100% {border-right-color: transparent;}
+
+    }
+
+    @keyframes typing {
+
+        100% {max-width: 100vw;}
+
+    }    
+
 #forma {
     
     position: absolute;

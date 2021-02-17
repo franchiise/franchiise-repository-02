@@ -10,6 +10,8 @@ let imgLosango = document.createElement('img')
 let imgTrapezio = document.createElement('img')
 let imgCirculo = document.createElement('img')
 
+let res = document.querySelector('#res')
+
 let medidas = document.querySelector('#medidas')
 
 let baseMenor = document.querySelector('#baseMenorForma')
@@ -571,5 +573,13 @@ function calcular() {
         }
 
     }
+
+    setTimeout(function () {
+
+        res.style.display = 'block'  
+
+        res.innerHTML += `<strong>${base.value * base.value}m²</strong>` 
+
+    }, 1000)
 
 }
