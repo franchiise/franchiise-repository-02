@@ -14,9 +14,9 @@ let res = document.querySelector('#res')
 
 let medidas = document.querySelector('#medidas')
 
-let baseMenor = document.querySelector('#baseMenorForma')
-let base = document.querySelector('#baseForma')
-let altura = document.querySelector('#alturaForma')
+var baseMenor = document.querySelector('#baseMenorForma')
+var base = document.querySelector('#baseForma')
+var altura = document.querySelector('#alturaForma') 
 
 let labelBaseMenor = document.querySelector('#labelBaseMenor')
 let labelBase = document.querySelector('#labelBase')
@@ -27,7 +27,7 @@ let button = document.querySelector('#button')
 var maxWidth = window.matchMedia('(max-width: 540px)')
 
 function quadrado() {
-
+         
     imgRetangulo.style.display = 'none'
 
     imgTriangulo.style.display = 'none'
@@ -90,6 +90,10 @@ function quadrado() {
         medidas.style.left = '7.5%'
 
     } 
+
+    var b = Number(base.value) 
+
+    res.innerHTML += `<strong>${b * b}</strong>` 
 
 }
 
