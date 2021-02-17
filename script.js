@@ -437,7 +437,7 @@ function circulo() {
 
 function calcular() {
 
-    if (base.value.length == 0 || altura.value.length == 0 || baseMenor.value.length == 0 && altura.disabled != true) {
+    if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
 
         alert('[ERRO] Preencha todos os dados')
 
@@ -472,7 +472,7 @@ function calcular() {
 
         button.disabled = true
 
-        if (maxWidth.matches == true && b >= 75 || h >= 75 || bM >= 75) {
+        if (maxWidth.matches == true && b >= 75 || h >= 75) {
 
             imgQuadrado.style.width = 190 + 'px'
             imgQuadrado.style.height = 190 + 'px'
@@ -492,7 +492,7 @@ function calcular() {
             imgCirculo.style.width = 190 + 'px'
             imgCirculo.style.height = 190 + 'px'
         
-        } else if (maxWidth.matches == false && b >= 150 || h >= 150 || bM >= 150) {
+        } else if (maxWidth.matches == false && b >= 150 || h >= 150) {
 
             imgQuadrado.style.width = 330 + 'px'
             imgQuadrado.style.height = 330 + 'px'
