@@ -14,6 +14,8 @@ let res = document.querySelector('#res')
 
 let medidas = document.querySelector('#medidas')
 
+medidas.style.display = 'none'
+
 var baseMenor = document.querySelector('#baseMenorForma')
 var base = document.querySelector('#baseForma')
 var altura = document.querySelector('#alturaForma') 
@@ -26,7 +28,9 @@ let button = document.querySelector('#button')
 
 var maxWidth = window.matchMedia('(max-width: 540px)')
 
-function quadrado() {
+function quadrado(control) {
+
+    medidas.style.display = 'block'
          
     imgRetangulo.style.display = 'none'
 
@@ -61,43 +65,49 @@ function quadrado() {
 
     baseMenor.style.display = 'none'
 
-    labelBaseMenor.style.display = 'none'
-
     base.disabled = false
     altura.disabled = true
-
-    altura.style.marginTop = '-19px'
-    altura.style.marginLeft = '76px'
     
-    altura.style.display = 'block'
+    altura.style.display = 'none'
 
-    labelBase.innerHTML = '<strong>Base: </strong>'
-    labelAltura.innerHTML = '<strong>Altura: </strong>'
+    labelBase.innerHTML = '<strong>Base e Altura: </strong>'
 
-    labelAltura.style.display = 'block'
+    labelBaseMenor.style.display = 'none'
+    
+    labelAltura.style.display = 'none'
 
     button.disabled = false
- 
+
     if (maxWidth.matches == true) {
 
         imgQuadrado.style.width = '120px'
         imgQuadrado.style.height = '120px'
 
-        medidas.style.left = '32%'
+        medidas.style.left = '40.5%'
 
     } else if (maxWidth.matches != true) {
 
-        medidas.style.left = '7.5%'
+        medidas.style.left = '9.75%'
 
-    } 
+    }
 
-    var b = Number(base.value) 
-
-    res.innerHTML += `<strong>${b * b}</strong>` 
+    var controlToValidate = document.getElementById(control);
+            
+    if (controlToValidate.value == "") {
+        
+        res.innerHTML = `Área: ${b * b}m²`
+    
+    } else {
+        
+        res.innerHTML = 'dfsndkfn'
+    
+    }
 
 }
 
 function retangulo() {
+
+    medidas.style.display = 'block'
 
     imgQuadrado.style.display = 'none'
 
@@ -169,6 +179,8 @@ function retangulo() {
 
 function triangulo() {
 
+    medidas.style.display = 'block'
+
     imgQuadrado.style.display = 'none'
 
     imgRetangulo.style.display = 'none'
@@ -239,6 +251,8 @@ function triangulo() {
 
 function losango() {
 
+    medidas.style.display = 'block'
+
     imgQuadrado.style.display = 'none'
 
     imgRetangulo.style.display = 'none'
@@ -301,13 +315,15 @@ function losango() {
 
     } else if (maxWidth.matches != true) {
 
-        medidas.style.left = '10%'
+        medidas.style.left = '10.35%'
 
     }
 
 }
 
 function trapezio() {
+
+    medidas.style.display = 'block'
 
     imgQuadrado.style.display = 'none'
 
@@ -375,13 +391,15 @@ function trapezio() {
 
     } else if (maxWidth.matches != true) {
 
-        medidas.style.left = '8.75%'
+        medidas.style.left = '8.8%'
 
     }
 
 }
 
 function circulo() {
+
+    medidas.style.display = 'block'
 
     imgQuadrado.style.display = 'none'
 
@@ -439,6 +457,8 @@ function circulo() {
 }
 
 function calcular() {
+
+    medidas.style.display = 'block'
 
     if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
 
@@ -575,9 +595,9 @@ function calcular() {
 
     }
 
-    setTimeout(function () {
+    setTimeout(function () {   
 
-        res.style.display = 'block'   
+        res.style.display = 'block'
 
     }, 1000)
 
