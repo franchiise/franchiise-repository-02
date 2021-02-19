@@ -84,6 +84,8 @@ function quadrado() {
 
         medidas.style.left = '39.5%'
 
+        labelBase.style.marginTop = '1%'
+
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '9.75%'
