@@ -446,7 +446,7 @@ button:hover {
 
 }
 
-@media (max-width: 540px) {
+@media (max-width: 500px) {
 
     h3 {
 
@@ -607,7 +607,7 @@ button:hover {
 
         position: absolute;
         top: 81%;
-        left: 32%;
+        left: 20%;
     
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);

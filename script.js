@@ -13,7 +13,6 @@ let imgCirculo = document.createElement('img')
 let res = document.querySelector('#res')
 
 let medidas = document.querySelector('#medidas')
-
 medidas.style.display = 'none'
 
 var baseMenor = document.querySelector('#baseMenorForma')
@@ -26,9 +25,9 @@ let labelAltura = document.querySelector('#labelAltura')
 
 let button = document.querySelector('#button')
 
-var maxWidth = window.matchMedia('(max-width: 540px)')
+var maxWidth = window.matchMedia('(max-width: 500px)')
 
-function quadrado(control) {
+function quadrado() {
 
     medidas.style.display = 'block'
          
@@ -63,44 +62,32 @@ function quadrado(control) {
 
     }, 500)
 
-    baseMenor.style.display = 'none'
-
     base.disabled = false
     altura.disabled = true
-    
-    altura.style.display = 'none'
 
-    labelBase.innerHTML = '<strong>Base e Altura: </strong>'
+    button.disabled = false
 
     labelBaseMenor.style.display = 'none'
     
-    labelAltura.style.display = 'none'
+    baseMenor.style.display = 'none'
 
-    button.disabled = false
+    labelBase.innerHTML = '<strong>Base e Altura: </strong>'
+
+    labelAltura.style.display = 'none'
+    
+    altura.style.display = 'none'
 
     if (maxWidth.matches == true) {
 
         imgQuadrado.style.width = '120px'
         imgQuadrado.style.height = '120px'
 
-        medidas.style.left = '40.5%'
+        medidas.style.left = '39.5%'
 
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '9.75%'
 
-    }
-
-    var controlToValidate = document.getElementById(control);
-            
-    if (controlToValidate.value == "") {
-        
-        res.innerHTML = `Área: ${b * b}m²`
-    
-    } else {
-        
-        res.innerHTML = 'dfsndkfn'
-    
     }
 
 }
@@ -140,27 +127,29 @@ function retangulo() {
 
     }, 500)
 
-    baseMenor.style.display = 'none'
-
-    labelBaseMenor.style.display = 'none'
-
-    base.value = ''
-    altura.value = ''
-
     base.disabled = false
     altura.disabled = false
 
-    altura.style.marginTop = '-19px'
-    altura.style.marginLeft = '76px'
+    button.disabled = false
+
+    labelBaseMenor.style.display = 'none'
     
-    altura.style.display = 'block'
+    baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Base: </strong>'
-    labelAltura.innerHTML = '<strong>Altura: </strong>'
+    
+    base.value = ''
 
     labelAltura.style.display = 'block'
+    
+    labelAltura.innerHTML = '<strong>Altura: </strong>'
 
-    button.disabled = false
+    altura.style.display = 'block'
+    
+    altura.value = ''
+
+    altura.style.marginTop = '-19px'
+    altura.style.marginLeft = '76px'
 
     if (maxWidth.matches == true) {
 
@@ -212,27 +201,28 @@ function triangulo() {
 
     }, 500)
 
-    baseMenor.style.display = 'none'
-
-    labelBaseMenor.style.display = 'none'
-
-    base.value = ''
-    altura.value = ''
-
     base.disabled = false
     altura.disabled = false
 
-    altura.style.marginTop = '-19px'
-    altura.style.marginLeft = '76px'
-    
-    altura.style.display = 'block'
+    button.disabled = false
+
+    labelBaseMenor.style.display = 'none'
+
+    baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Base: </strong>'
-    labelAltura.innerHTML = '<strong>Altura: </strong>'
+    
+    base.value = ''
 
     labelAltura.style.display = 'block'
+    labelAltura.innerHTML = '<strong>Altura: </strong>'
+    
+    altura.style.display = 'block'
+    
+    altura.value = ''
 
-    button.disabled = false
+    altura.style.marginTop = '-19px'
+    altura.style.marginLeft = '76px'
 
     if (maxWidth.matches == true) {
 
@@ -284,34 +274,36 @@ function losango() {
 
     }, 500)
 
-    baseMenor.style.display = 'none'
-
-    labelBaseMenor.style.display = 'none'
-
-    base.value = ''
-    altura.value = ''
-
     base.disabled = false
     altura.disabled = false
 
-    altura.style.marginTop = '-19px'
-    altura.style.marginLeft = '163px'
+    button.disabled = false
 
-    altura.style.display = 'block'
+    labelBaseMenor.style.display = 'none'
+
+    baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Diagonal Maior: </strong>'
-    labelAltura.innerHTML = '<strong>Diagonal Menor: </strong>'
+    
+    base.value = ''
 
     labelAltura.style.display = 'block'
+    
+    labelAltura.innerHTML = '<strong>Diagonal Menor: </strong>'
 
-    button.disabled = false
+    altura.style.display = 'block'
+    
+    altura.value = ''
+
+    altura.style.marginTop = '-19px'
+    altura.style.marginLeft = '163px'
 
     if (maxWidth.matches == true) {
 
         imgLosango.style.width = '110px'
         imgLosango.style.height = '190px'
 
-        medidas.style.left = '42%'
+        medidas.style.left = '44%'
 
     } else if (maxWidth.matches != true) {
 
@@ -356,38 +348,40 @@ function trapezio() {
 
     }, 500)
 
-    baseMenor.style.marginTop = '-19px'
-    baseMenor.style.marginLeft = '115px'
-
-    baseMenor.style.display = 'block'
-
-    labelBaseMenor.style.display = 'block'
-    
-    base.value = ''
-    altura.value = ''
-
     baseMenor.disabled = false
     base.disabled = false
     altura.disabled = false
 
-    altura.style.marginTop = '-19px'
-    altura.style.marginLeft = '76px'
-    
-    altura.style.display = 'block'
+    button.disabled = false
+
+    labelBaseMenor.style.display = 'block'
+
+    baseMenor.style.display = 'block'
+
+    baseMenor.style.marginTop = '-19px'
+    baseMenor.style.marginLeft = '115px'
 
     labelBase.innerHTML = '<strong>Base Maior: </strong>'
+    
+    base.value = ''
+
     labelAltura.innerHTML = '<strong>Altura: </strong>'
 
     labelAltura.style.display = 'block'
 
-    button.disabled = false
-
+    altura.style.display = 'block'
+    
+    altura.value = ''
+    
+    altura.style.marginTop = '-19px'
+    altura.style.marginLeft = '76px'
+    
     if (maxWidth.matches == true) {
 
         imgTrapezio.style.width = '170px'
         imgTrapezio.style.height = '95px'
 
-        medidas.style.left = '37%'
+        medidas.style.left = '37.4%'
 
     } else if (maxWidth.matches != true) {
 
@@ -426,31 +420,33 @@ function circulo() {
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
-    baseMenor.style.display = 'none'
+    button.disabled = false
+    base.disabled = false
 
     labelBaseMenor.style.display = 'none'
 
-    base.value = ''
-    altura.value = ''
-
-    base.disabled = false
-    altura.style.display = 'none'
+    baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Raio: </strong>'
+
+    base.value = ''
+
     labelAltura.style.display = 'none'
 
-    button.disabled = false
+    altura.style.display = 'none'
+
+    altura.value = ''
 
     if (maxWidth.matches == true) {
 
         imgCirculo.style.width = '120px'
         imgCirculo.style.height = '120px'
 
-        medidas.style.left = '29%'
+        medidas.style.left = '29.5%'
 
     } else if (maxWidth.matches != true) {
 
-        medidas.style.left = '7%'
+        medidas.style.left = '6.93%'
 
     }
 
