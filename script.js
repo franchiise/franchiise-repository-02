@@ -73,9 +73,13 @@ function quadrado() {
 
     labelBase.innerHTML = '<strong>Base e Altura: </strong>'
 
+    base.value = ''
+
     labelAltura.style.display = 'none'
     
     altura.style.display = 'none'
+
+    altura.value = ''
 
     if (maxWidth.matches == true) {
 
@@ -83,8 +87,6 @@ function quadrado() {
         imgQuadrado.style.height = '120px'
 
         medidas.style.left = '39.5%'
-
-        labelBase.style.marginTop = '1%'
 
     } else if (maxWidth.matches != true) {
 
@@ -139,7 +141,7 @@ function retangulo() {
     baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Base: </strong>'
-    
+
     base.value = ''
 
     labelAltura.style.display = 'block'
@@ -147,7 +149,7 @@ function retangulo() {
     labelAltura.innerHTML = '<strong>Altura: </strong>'
 
     altura.style.display = 'block'
-    
+
     altura.value = ''
 
     altura.style.marginTop = '-19px'
@@ -213,14 +215,14 @@ function triangulo() {
     baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Base: </strong>'
-    
+
     base.value = ''
 
     labelAltura.style.display = 'block'
     labelAltura.innerHTML = '<strong>Altura: </strong>'
     
     altura.style.display = 'block'
-    
+
     altura.value = ''
 
     altura.style.marginTop = '-19px'
@@ -286,7 +288,7 @@ function losango() {
     baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Diagonal Maior: </strong>'
-    
+
     base.value = ''
 
     labelAltura.style.display = 'block'
@@ -294,7 +296,7 @@ function losango() {
     labelAltura.innerHTML = '<strong>Diagonal Menor: </strong>'
 
     altura.style.display = 'block'
-    
+
     altura.value = ''
 
     altura.style.marginTop = '-19px'
@@ -360,19 +362,19 @@ function trapezio() {
 
     baseMenor.style.display = 'block'
 
+    base.value = ''
+
     baseMenor.style.marginTop = '-19px'
     baseMenor.style.marginLeft = '115px'
 
     labelBase.innerHTML = '<strong>Base Maior: </strong>'
-    
-    base.value = ''
 
     labelAltura.innerHTML = '<strong>Altura: </strong>'
 
     labelAltura.style.display = 'block'
 
     altura.style.display = 'block'
-    
+
     altura.value = ''
     
     altura.style.marginTop = '-19px'
@@ -424,14 +426,14 @@ function circulo() {
 
     button.disabled = false
     base.disabled = false
+    
+    base.value = ''
 
     labelBaseMenor.style.display = 'none'
 
     baseMenor.style.display = 'none'
 
     labelBase.innerHTML = '<strong>Raio: </strong>'
-
-    base.value = ''
 
     labelAltura.style.display = 'none'
 
@@ -493,27 +495,7 @@ function calcular() {
 
         button.disabled = true
 
-        if (maxWidth.matches == true && b >= 75 || h >= 75) {
-
-            imgQuadrado.style.width = 190 + 'px'
-            imgQuadrado.style.height = 190 + 'px'
-                    
-            imgRetangulo.style.width = 240 + 'px'
-            imgRetangulo.style.height = 170 + 'px'
-        
-            imgTriangulo.style.width = 210 + 'px'
-            imgTriangulo.style.height = 190 + 'px'
-        
-            imgLosango.style.width = 190 + 'px'
-            imgLosango.style.height = 270 + 'px'
-        
-            imgTrapezio.style.width = 260 + 'px'
-            imgTrapezio.style.height = 160 + 'px'
-        
-            imgCirculo.style.width = 190 + 'px'
-            imgCirculo.style.height = 190 + 'px'
-        
-        } else if (maxWidth.matches == false && b >= 150 || h >= 150) {
+        if (maxWidth.matches != true && (b >= 150 || h >= 150)) {
 
             imgQuadrado.style.width = 330 + 'px'
             imgQuadrado.style.height = 330 + 'px'
@@ -532,6 +514,26 @@ function calcular() {
 
             imgCirculo.style.width = 400 + 'px'
             imgCirculo.style.height = 400 + 'px'
+        
+        } else if (maxWidth.matches == true && (b >= 75 || h >= 75)) {
+
+            imgQuadrado.style.width = 190 + 'px'
+            imgQuadrado.style.height = 190 + 'px'
+                    
+            imgRetangulo.style.width = 240 + 'px'
+            imgRetangulo.style.height = 170 + 'px'
+        
+            imgTriangulo.style.width = 210 + 'px'
+            imgTriangulo.style.height = 190 + 'px'
+        
+            imgLosango.style.width = 190 + 'px'
+            imgLosango.style.height = 270 + 'px'
+        
+            imgTrapezio.style.width = 230 + 'px'
+            imgTrapezio.style.height = 130 + 'px'
+        
+            imgCirculo.style.width = 190 + 'px'
+            imgCirculo.style.height = 190 + 'px'
 
         } else {    
 
