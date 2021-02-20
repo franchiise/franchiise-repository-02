@@ -532,7 +532,7 @@ function calcular() {
 
         alert('[ERRO] Preencha todos os dados')
 
-        f.quadradObject()
+        location.reload()
 
         area.replace('Área: 0m²', '')
 

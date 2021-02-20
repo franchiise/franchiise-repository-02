@@ -630,7 +630,7 @@ button:hover {
         top: 19%;
         left: 11%;
 
-        animation: cursorBlink 1500ms steps(10) infinite normal, typing 5000ms steps(75) normal 1 both;
+        animation: cursorBlink 1500ms steps(10) infinite normal, typing 3000ms steps(50) normal 1 both;
     
     }
 
