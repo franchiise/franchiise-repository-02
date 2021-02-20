@@ -79,6 +79,8 @@ const f = {
         
         baseMenor.style.display = 'none'
 
+        baseMenor.value = ''
+
         labelBase.innerHTML = '<strong>Base e Altura: </strong>'
 
         base.value = ''
@@ -149,6 +151,8 @@ const f = {
         labelBaseMenor.style.display = 'none'
         
         baseMenor.style.display = 'none'
+
+        baseMenor.value = ''
 
         labelBase.innerHTML = '<strong>Base: </strong>'
 
@@ -226,6 +230,8 @@ const f = {
 
         baseMenor.style.display = 'none'
 
+        baseMenor.value = ''
+
         labelBase.innerHTML = '<strong>Base: </strong>'
 
         base.value = ''
@@ -300,6 +306,8 @@ const f = {
         labelBaseMenor.style.display = 'none'
 
         baseMenor.style.display = 'none'
+
+        baseMenor.value = ''
 
         labelBase.innerHTML = '<strong>Diagonal Maior: </strong>'
 
@@ -378,12 +386,14 @@ const f = {
 
         baseMenor.style.display = 'block'
 
-        base.value = ''
+        baseMenor.value = ''
 
         baseMenor.style.marginTop = '-19px'
         baseMenor.style.marginLeft = '115px'
 
         labelBase.innerHTML = '<strong>Base Maior: </strong>'
+
+        base.value = ''
 
         labelAltura.innerHTML = '<strong>Altura: </strong>'
 
@@ -445,12 +455,14 @@ const f = {
         button.disabled = false
         base.disabled = false
         
-        base.value = ''
-
         labelBaseMenor.style.display = 'none'
 
         baseMenor.style.display = 'none'
 
+        baseMenor.value = ''
+
+        base.value = ''
+        
         labelBase.innerHTML = '<strong>Raio: </strong>'
 
         labelAltura.style.display = 'none'
@@ -653,29 +665,33 @@ function calcular() {
 
     setTimeout(function () {
 
-        area.style.display = 'block'
+        if (imgQuadrado.style.display == 'block') {
 
-        let checkQuadrado = f.quadradObject()
-        let checkLosango = f.losangObject()
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`;
 
-        const resQuadrado = Number(base.value) * Number(base.value)
-        const resLosango = (Number(base.value) * Number(altura.value)) / 2
+        } else if (imgRetangulo.style.display == 'block') {
 
-        function checkResultados() {
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`;
 
-            if (!checkQuadrado) {
+        } else if (imgTriangulo.style.display == 'block') {
 
-                area.innerHTML = `<strong>Área: ${resQuadrado}m²</strong>`
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`;
 
-            } else if (!checkLosango) {
-        
-                area.innerHTML = `<strong>Área: ${resLosango}m²</strong>`
+        } else if (imgLosango.style.display == 'block') {
 
-            }
+            area.innerHTML = `<strong>Área: ${(Number(base.value) * Number(altura.value))/2}m²</strong>`;
+
+        } else if (imgTrapezio.style.display == 'block') {
+
+            area.innerHTML = `<strong>Área: ${((Number(baseMenor.value) + Number(base.value)) * Number(altura.value))/2}m²</strong>`;
+
+        } else {
+
+            area.innerHTML = `<strong>Área: ${(Number(base.value) ** 2) * 3.17}m²</strong>`;
 
         }
 
-        checkResultados()
+        area.style.display = 'block';
 
     }, 1000)
 
