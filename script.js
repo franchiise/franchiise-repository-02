@@ -532,6 +532,10 @@ function calcular() {
 
         alert('[ERRO] Preencha todos os dados')
 
+        f.quadradObject()
+
+        area.replace('Área: 0m²', '')
+
     } else {
 
         imgQuadrado.style.transition = '250ms'

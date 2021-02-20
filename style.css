@@ -333,7 +333,7 @@ h3 {
     max-width: 0vw; 
     overflow: hidden;
 
-    animation: cursorBlink 1200ms steps(40) infinite normal, typing 10000ms steps(150) normal 1 both;
+    animation: cursorBlink 1200ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
 
     display: none;
 
@@ -620,6 +620,18 @@ button:hover {
             
         margin-left: 233px;
 
+    }
+
+    #area {
+
+        font-size: 1.1em;
+    
+        position: absolute;
+        top: 19%;
+        left: 11%;
+
+        animation: cursorBlink 1500ms steps(10) infinite normal, typing 5000ms steps(75) normal 1 both;
+    
     }
 
     #forma {
