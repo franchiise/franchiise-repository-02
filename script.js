@@ -553,38 +553,38 @@ function calcular() {
             imgQuadrado.style.width = 190 + 'px'
             imgQuadrado.style.height = 190 + 'px'
                     
-            imgRetangulo.style.width = 240 + 'px'
-            imgRetangulo.style.height = 170 + 'px'
+            imgRetangulo.style.width = 230 + 'px'
+            imgRetangulo.style.height = 160 + 'px'
         
-            imgTriangulo.style.width = 210 + 'px'
-            imgTriangulo.style.height = 190 + 'px'
+            imgTriangulo.style.width = 190 + 'px'
+            imgTriangulo.style.height = 170 + 'px'
         
-            imgLosango.style.width = 190 + 'px'
-            imgLosango.style.height = 270 + 'px'
+            imgLosango.style.width = 170 + 'px'
+            imgLosango.style.height = 250 + 'px'
         
             imgTrapezio.style.width = 230 + 'px'
-            imgTrapezio.style.height = 130 + 'px'
+            imgTrapezio.style.height = 140 + 'px'
         
             imgCirculo.style.width = 190 + 'px'
             imgCirculo.style.height = 190 + 'px'
 
         } else {    
 
-            let widthQuadrado = parseInt(imgQuadrado.style.width, 0)
+            let widthQuadrado = imgQuadrado.offsetWidth
            
-            let widthRetangulo = parseInt(imgRetangulo.style.width, 0)
-            let heightRetangulo = parseInt(imgRetangulo.style.height, 0)
+            let widthRetangulo = imgRetangulo.offsetWidth
+            let heightRetangulo = imgRetangulo.offsetHeight
 
-            let widthTriangulo = parseInt(imgTriangulo.style.width, 0)
-            let heightTriangulo = parseInt(imgTriangulo.style.height, 0)
+            let widthTriangulo = imgTriangulo.offsetWidth
+            let heightTriangulo = imgTriangulo.offsetWidth
 
-            let widthLosango = parseInt(imgLosango.style.width, 0)
-            let heightLosango = parseInt(imgLosango.style.height, 0)
+            let widthLosango = imgLosango.offsetWidth
+            let heightLosango = imgLosango.offsetHeight
 
-            let widthTrapezio = parseInt(imgTrapezio.style.width, 0)
-            let heightTrapezio = parseInt(imgTrapezio.style.height, 0)
+            let widthTrapezio = imgTrapezio.offsetWidth
+            let heightTrapezio = imgTrapezio.offsetWidth
 
-            let widthCirculo = parseInt(imgCirculo.style.width, 0)
+            let widthCirculo = imgCirculo.offsetWidth
 
             // ------------------------- // ------------------------- //
 

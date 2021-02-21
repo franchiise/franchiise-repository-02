@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+
+<head>
+
+    <title>ex</title>
+
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <img id = "forma" src = "Imagens/quadrado.png"></img>
+
+    <button id = "button" onclick = "toClick()">click</button>
+    
+</body>
+
+<style>
+
+    #forma {
+
+        width: 175px;
+
+        padding: 1px;
+
+        padding-left: 10px;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        transition: 250ms;
+
+    }
+
+    #button {
+
+        position: absolute;
+        top: 90%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        cursor: pointer;
+
+    }
+
+</style>
+
+<script>
+
+    function toClick() {
+
+        let forma = document.querySelector('#forma')
+
+        forma.style.width = '250px'
+
+        setTimeout(function () {
+
+            forma.style.borderLeft = '1px solid black'
+
+        }, 500)
+
+    }
+
+</script>
+
+</html>
