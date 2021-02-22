@@ -44,7 +44,7 @@ h3 {
     margin-left: 20px;
     margin-top: 15px;
 
-    z-index: 1;
+    z-index: 2;
 
 }
 
@@ -63,7 +63,7 @@ h3 {
 
     opacity: 0;
 
-    z-index: 2;
+    z-index: 3;
 
 }
 
@@ -362,7 +362,7 @@ h3 {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
-    z-index: -1;    
+    z-index: 1;    
 
 }
 
@@ -384,6 +384,46 @@ h3 {
         100% {transform: rotate(360deg);}
 
     }
+
+
+#medida00 {
+
+    background-color: black;
+
+    width: 1.5px;
+    height: 175px;
+
+    position: absolute;
+    top: 50%;
+    left: 43%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    z-index: -1;
+
+}
+
+#medida01 {
+
+    background-color: black;
+
+    width: 175px;
+    height: 1px;
+
+    position: absolute;
+    top: 64.5%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    z-index: -1;
+}
 
 #medidas {
 

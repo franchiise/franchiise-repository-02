@@ -14,8 +14,10 @@
 <body>
 
     <img id = "forma" src = "Imagens/quadrado.png"></img>
+    <div id = "linha00"></div>
+    <div id = "linha01"></div>
 
-    <button id = "button" onclick = "toClick()">click</button>
+    <button id = "button" onclick = "toClick()" disabled>click</button>
     
 </body>
 
@@ -27,7 +29,7 @@
 
         padding: 1px;
 
-        padding-left: 10px;
+        padding: 10px;
         
         position: absolute;
         top: 50%;
@@ -53,21 +55,90 @@
 
     }
 
+    #linha00 {
+
+        background-color: black;
+
+        width: 1.5px;
+        height: 175px;
+
+        position: absolute;
+        top: 50%;
+        left: 43%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+
+        transition: 500ms;
+
+    }
+
+    #linha01 {
+
+        background-color: black;
+
+        width: 175px;
+        height: 1px;
+
+        position: absolute;
+        top: 64.5%;
+        left: 50%;
+
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+
+        transition: 500ms;
+
+    }
+
 </style>
 
 <script>
 
+    let button = document.querySelector('#button')
+    
+    button.disabled = false
+
+    let forma = document.querySelector('#forma')
+
+    let linha00 = document.querySelector('#linha00')
+    let linha01 = document.querySelector('#linha01')
+
     function toClick() {
 
-        let forma = document.querySelector('#forma')
+        let formaWidthValue = forma.offsetWidth
 
-        forma.style.width = '250px'
+        forma.style.width = formaWidthValue + (25*1) + 'px' 
+
+        let linha00HeightValue = linha00.offsetHeight
+        let linha00LeftValue = linha00.offsetLeft
+
+        let linha01WidthValue = linha01.offsetWidth
+        let linha01TopValue = linha01.offsetTop
 
         setTimeout(function () {
 
-            forma.style.borderLeft = '1px solid black'
+            linha00.style.opacity = '1'
+
+            linha00.style.height = linha00HeightValue + (45*1) + 'px'     
+            linha00.style.left = linha00LeftValue + (-25*1) + 'px'     
+
+        }, 250)
+
+        setTimeout(function () {
+
+            linha01.style.opacity = '1'
+
+            linha01.style.width = linha01WidthValue + (45*1) + 'px'     
+            linha01.style.top = linha01TopValue + (25*1) + 'px'     
 
         }, 500)
+
+        button.disabled = true
 
     }
 

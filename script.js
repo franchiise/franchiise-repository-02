@@ -10,6 +10,9 @@ let imgLosango = document.createElement('img')
 let imgTrapezio = document.createElement('img')
 let imgCirculo = document.createElement('img')
 
+let medida00 = document.querySelector('#medida00')
+let medida01 = document.querySelector('#medida01')
+
 let area = document.querySelector('#area')
 
 let medidas = document.querySelector('#medidas')
@@ -307,13 +310,13 @@ function losango() {
 
     baseMenor.value = ''
 
-    labelBase.innerHTML = '<strong>Diagonal Maior: </strong>'
+    labelBase.innerHTML = '<strong>Diagonal Menor: </strong>'
 
     base.value = ''
 
     labelAltura.style.display = 'block'
     
-    labelAltura.innerHTML = '<strong>Diagonal Menor: </strong>'
+    labelAltura.innerHTML = '<strong>Diagonal Maior: </strong>'
 
     altura.style.display = 'block'
 
@@ -485,8 +488,62 @@ function circulo() {
 }
 
 function calcular() {
-
+    
     medidas.style.display = 'block'
+
+    // ---------- // ---------- //
+
+    var bM = Number(baseMenor.value) 
+    var b = Number(base.value) 
+    var h = Number(altura.value) 
+
+    bM = bM * 3.780        
+    b = b * 3.780
+    h = h * 3.780
+
+    // -------------------- // -------------------- //
+
+    let widthQuadrado = imgQuadrado.offsetWidth
+    
+        let medida00HeightValue = medida00.offsetHeight
+        let medida00LeftValue = medida00.offsetLeft
+
+        let medida01WidthValue = medida01.offsetWidth
+        let medida01TopValue = medida01.offsetTop
+
+    let widthRetangulo = imgRetangulo.offsetWidth
+    let heightRetangulo = imgRetangulo.offsetHeight
+    
+    let widthTriangulo = imgTriangulo.offsetWidth
+    let heightTriangulo = imgTriangulo.offsetWidth
+    
+    let widthLosango = imgLosango.offsetWidth
+    let heightLosango = imgLosango.offsetHeight
+    
+    let widthTrapezio = imgTrapezio.offsetWidth
+    let heightTrapezio = imgTrapezio.offsetWidth
+    
+    let widthCirculo = imgCirculo.offsetWidth
+ 
+    // -------------------- // -------------------- //
+
+    let resQuadradoWidth = b + widthQuadrado
+
+    let resRetanguloWidth = b + widthRetangulo
+    let resRetanguloHeight = h + heightRetangulo
+
+    let resTrianguloWidth = b + widthTriangulo
+    let resTrianguloHeight = h + heightTriangulo
+
+    let resLosangoWidth = b + widthLosango
+    let resLosangoHeight = h + heightLosango
+
+    let resTrapezioWidth = b + widthTrapezio
+    let resTrapezioHeight = h + heightTrapezio
+
+    let resCirculoWidth = b + widthCirculo
+
+    // --------------- // --------------- // --------------- // --------------- //
 
     if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
 
@@ -506,14 +563,6 @@ function calcular() {
         imgTrapezio.style.transition = '250ms'
         imgCirculo.style.transition = '250ms'
 
-        var bM = Number(baseMenor.value) 
-        var b = Number(base.value) 
-        var h = Number(altura.value) 
-
-        bM = bM * 3.780        
-        b = b * 3.780
-        h = h * 3.780
-
         imgQuadrado.style.animation = '2s resetRotateForma'
         imgRetangulo.style.animation = '2s resetRotateForma'
         imgTriangulo.style.animation = '2s resetRotateForma'
@@ -530,23 +579,23 @@ function calcular() {
 
         if (maxWidth.matches != true && (b >= 150 || h >= 150)) {
 
-            imgQuadrado.style.width = 330 + 'px'
-            imgQuadrado.style.height = 330 + 'px'
+            imgQuadrado.style.width = 350 + 'px'
+            imgQuadrado.style.height = 350 + 'px'
             
             imgRetangulo.style.width = 400 + 'px'
             imgRetangulo.style.height = 300 + 'px'
 
-            imgTriangulo.style.width = 350 + 'px'
-            imgTriangulo.style.height = 330 + 'px'
+            imgTriangulo.style.width = 300 + 'px'
+            imgTriangulo.style.height = 280 + 'px'
 
-            imgLosango.style.width = 350 + 'px'
-            imgLosango.style.height = 530 + 'px'
+            imgLosango.style.width = 300 + 'px'
+            imgLosango.style.height = 480 + 'px'
 
-            imgTrapezio.style.width = 450 + 'px'
-            imgTrapezio.style.height = 300 + 'px'
+            imgTrapezio.style.width = 400 + 'px'
+            imgTrapezio.style.height = 250 + 'px'
 
-            imgCirculo.style.width = 400 + 'px'
-            imgCirculo.style.height = 400 + 'px'
+            imgCirculo.style.width = 350 + 'px'
+            imgCirculo.style.height = 350 + 'px'
         
         } else if (maxWidth.matches == true && (b >= 75 || h >= 75)) {
 
@@ -568,96 +617,88 @@ function calcular() {
             imgCirculo.style.width = 190 + 'px'
             imgCirculo.style.height = 190 + 'px'
 
-        } else {    
+        } else {
 
-            let widthQuadrado = imgQuadrado.offsetWidth
-           
-            let widthRetangulo = imgRetangulo.offsetWidth
-            let heightRetangulo = imgRetangulo.offsetHeight
+            imgQuadrado.style.width = resQuadradoWidth + 'px'
+            imgQuadrado.style.height = resQuadradoWidth + 'px'
 
-            let widthTriangulo = imgTriangulo.offsetWidth
-            let heightTriangulo = imgTriangulo.offsetWidth
+            imgRetangulo.style.width = resRetanguloWidth + 'px'
+            imgRetangulo.style.height = resRetanguloHeight + 'px'
 
-            let widthLosango = imgLosango.offsetWidth
-            let heightLosango = imgLosango.offsetHeight
+            imgTriangulo.style.width = resTrianguloWidth + 'px'
+            imgTriangulo.style.height = resTrianguloHeight + 'px'
 
-            let widthTrapezio = imgTrapezio.offsetWidth
-            let heightTrapezio = imgTrapezio.offsetWidth
+            imgLosango.style.width = resLosangoWidth + 'px'
+            imgLosango.style.height = resLosangoHeight + 'px'
 
-            let widthCirculo = imgCirculo.offsetWidth
+            imgTrapezio.style.width = resTrapezioWidth + 'px'
+            imgTrapezio.style.height = resTrapezioHeight + 'px'
 
-            // ------------------------- // ------------------------- //
-
-            let areaQuadradoWidth = b + widthQuadrado
-
-            let areaRetanguloWidth = b + widthRetangulo
-            let areaRetanguloHeight = h + heightRetangulo
-
-            let areaTrianguloWidth = b + widthTriangulo
-            let areaTrianguloHeight = h + heightTriangulo
-
-            let areaLosangoWidth = b + widthLosango
-            let areaLosangoHeight = h + heightLosango
-
-            let areaTrapezioWidth = b + widthTrapezio
-            let areaTrapezioHeight = h + heightTrapezio
-
-            let areaCirculoWidth = b + widthCirculo
-
-            // ------------------------- // ------------------------- //
-
-            imgQuadrado.style.width = areaQuadradoWidth + 'px'
-            imgQuadrado.style.height = areaQuadradoWidth + 'px'
-
-            imgRetangulo.style.width = areaRetanguloWidth + 'px'
-            imgRetangulo.style.height = areaRetanguloHeight + 'px'
-
-            imgTriangulo.style.width = areaTrianguloWidth + 'px'
-            imgTriangulo.style.height = areaTrianguloHeight + 'px'
-
-            imgLosango.style.width = areaLosangoWidth + 'px'
-            imgLosango.style.height = areaLosangoHeight + 'px'
-
-            imgTrapezio.style.width = areaTrapezioWidth + 'px'
-            imgTrapezio.style.height = areaTrapezioHeight + 'px'
-
-            imgCirculo.style.width = areaCirculoWidth + 'px'
-            imgCirculo.style.height = areaCirculoWidth + 'px'
+            imgCirculo.style.width = resCirculoWidth + 'px'
+            imgCirculo.style.height = resCirculoWidth + 'px'
 
         }
 
     }
 
+    // --------------- // --------------- // --------------- // --------------- //
+
     setTimeout(function () {
 
         if (imgQuadrado.style.display == 'block') {
 
-            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`
+
+            medida00.style.height = resQuadradoWidth
+
+            if (maxWidth.matches != true && (b >= 150 || h >= 150)) {
+
+                setTimeout(function medida00Quadrado() {
+
+                    medida00.style.height = medida00HeightValue + 160 + 'px'
+                    medida00.style.left = medida00LeftValue + (-100) + 'px'
+
+                }, 250)
+
+                setTimeout(function medida01Quadrado() {
+                    
+                    medida01.style.width = medida01WidthValue + 160 + 'px'
+                    medida01.style.top = medida01TopValue + 100 + 'px'
+
+                }, 500)
+
+                medida00.style.transition = '250ms'
+                medida00.style.opacity = '1'
+
+                medida01.style.transition = '250ms'
+                medida01.style.opacity = '1'
+
+            } 
 
         } else if (imgRetangulo.style.display == 'block') {
 
-            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`
 
         } else if (imgTriangulo.style.display == 'block') {
 
-            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`
 
         } else if (imgLosango.style.display == 'block') {
 
-            area.innerHTML = `<strong>Área: ${(Number(base.value) * Number(altura.value))/2}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${(Number(base.value) * Number(altura.value))/2}m²</strong>`
 
         } else if (imgTrapezio.style.display == 'block') {
 
-            area.innerHTML = `<strong>Área: ${((Number(baseMenor.value) + Number(base.value)) * Number(altura.value))/2}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${((Number(baseMenor.value) + Number(base.value)) * Number(altura.value))/2}m²</strong>`
 
         } else {
 
-            area.innerHTML = `<strong>Área: ${(Number(base.value) ** 2) * 3.17}m²</strong>`;
+            area.innerHTML = `<strong>Área: ${(Number(base.value) ** 2) * 3.17}m²</strong>`
 
         }
 
         area.style.display = 'block';
 
-    }, 1000)
+    }, 1500)
 
 }
