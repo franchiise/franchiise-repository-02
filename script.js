@@ -504,12 +504,6 @@ function calcular() {
     // -------------------- // -------------------- //
 
     let widthQuadrado = imgQuadrado.offsetWidth
-    
-        let medida00HeightValue = medida00.offsetHeight
-        let medida00LeftValue = medida00.offsetLeft
-
-        let medida01WidthValue = medida01.offsetWidth
-        let medida01TopValue = medida01.offsetTop
 
     let widthRetangulo = imgRetangulo.offsetWidth
     let heightRetangulo = imgRetangulo.offsetHeight
@@ -643,39 +637,41 @@ function calcular() {
 
     // --------------- // --------------- // --------------- // --------------- //
 
-    setTimeout(function () {
+    if (imgQuadrado.style.display == 'block') {
 
-        if (imgQuadrado.style.display == 'block') {
+        area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`
 
-            area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`
+        medida00.style.height = resQuadradoWidth
 
-            medida00.style.height = resQuadradoWidth
+        if (maxWidth.matches != true && (b >= 150 || h >= 150)) {
 
-            if (maxWidth.matches != true && (b >= 150 || h >= 150)) {
+            setTimeout(function medida00Quadrado() {
 
-                setTimeout(function medida00Quadrado() {
+                medida00.style.height = '335px'
+                medida00.style.marginLeft = '-50px'
 
-                    medida00.style.height = medida00HeightValue + 160 + 'px'
-                    medida00.style.left = medida00LeftValue + (-100) + 'px'
+            }, 1250)
 
-                }, 250)
-
-                setTimeout(function medida01Quadrado() {
+            setTimeout(function medida01Quadrado() {
                     
-                    medida01.style.width = medida01WidthValue + 160 + 'px'
-                    medida01.style.top = medida01TopValue + 100 + 'px'
+                medida01.style.width = '335px'
+                medida01.style.marginTop = '50px'
 
-                }, 500)
+            }, 1500)
 
-                medida00.style.transition = '250ms'
-                medida00.style.opacity = '1'
+            medida00.style.transition = '250ms'
+            medida00.style.opacity = '1'
 
-                medida01.style.transition = '250ms'
-                medida01.style.opacity = '1'
+            medida01.style.transition = '250ms'
+            medida01.style.opacity = '1'
 
-            } 
+        } 
+    
+    }
 
-        } else if (imgRetangulo.style.display == 'block') {
+    setTimeout(function calcularArea() {
+
+        if (imgRetangulo.style.display == 'block') {
 
             area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`
 
@@ -699,6 +695,6 @@ function calcular() {
 
         area.style.display = 'block';
 
-    }, 1500)
+    }, 2500)
 
 }
