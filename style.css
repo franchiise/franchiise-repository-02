@@ -315,15 +315,27 @@ h3 {
 
     }
 
-#area {
+#linhaEfeito {
+
+    background-color: black;
+
+    width: 1px;
+    height: 0px;
+
+    margin-top: -27%;
+    margin-left: 84%;
+
+    transition: 500ms;
+
+}
+
+#formula {
 
     font-size: 1.1em;
 
     position: absolute;
     top: 7%;
-    left: 11%;
-
-    display: flex;
+    left: 85%;
 
     border-right-width: 2px;
     border-right-style: solid;
@@ -333,7 +345,105 @@ h3 {
     max-width: 0vw; 
     overflow: hidden;
 
-    animation: cursorBlink 1200ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
+#calculo00 {
+
+    word-wrap: break-word;
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 11%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
+#calculo01 {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 15%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
+#calculo02 {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 19%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
+#area {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 19%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
 
     display: none;
 
@@ -384,46 +494,6 @@ h3 {
         100% {transform: rotate(360deg);}
 
     }
-
-
-#medida00 {
-
-    background-color: black;
-
-    width: 1.5px;
-    height: 175px;
-
-    position: absolute;
-    top: 50%;
-    left: 40%;
-
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    opacity: 1;
-
-    z-index: -1;
-
-}
-
-#medida01 {
-
-    background-color: black;
-
-    width: 175px;
-    height: 1px;
-
-    position: absolute;
-    top: 70%;
-    left: 50%;
-
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    opacity: 1;
-
-    z-index: -1;
-}
 
 #medidas {
 
