@@ -1,5 +1,7 @@
 # Skulito 📁 | Cálculo - Área de Figura Geométrica 📐
 
+Link: https://skulito.github.io/skulito-repository-02/
+
 ➜ As *áreas das figuras planas* medem o tamanho da superfície da figura. Desse modo, podemos pensar que quanto maior a superfície da figura, maior será sua área.
 
 ➜ No cálculo da área de determinada figura, existe um meio de calcular sua área, geralmente, para encontrar a área de uma figura basta multiplicar a base (b) pela altura (h).
