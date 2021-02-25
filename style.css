@@ -35,7 +35,7 @@ h3 {
     background-color: white;
 
     width: 80px;
-    height: 400px;
+    height: 396.5px;
 
     border-radius: 2.5px;
 
@@ -763,6 +763,58 @@ button:hover {
     
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
+    }
+
+}
+
+@media (max-height: 720px) {
+
+    #formas {
+
+        margin-top: 20px;
+
+    }
+
+    #quadrado {
+
+        margin-top: -10px;
+
+    }
+
+    #linhaEfeito {
+
+        display: none;
+
+    }
+
+    #formula {
+
+        margin-left: -20px;
+
+    }
+
+    #calculo00 {
+
+        margin-left: -20px;
+
+    }
+
+    #calculo01 {
+
+        margin-left: -20px;
+
+    }
+
+    #calculo02 {
+
+        margin-left: -20px;
+
+    }
+
+    #area {
+
+        margin-left: -20px;
 
     }
 

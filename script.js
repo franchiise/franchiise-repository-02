@@ -40,6 +40,7 @@ let labelAltura = document.querySelector('#labelAltura')
 let button = document.querySelector('#button')
 
 var maxWidth = window.matchMedia('(max-width: 500px)')
+var maxHeight = window.matchMedia('(max-height: 720px)')
 
 function quadrado() {
 
@@ -115,6 +116,12 @@ function quadrado() {
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '9.75%'
+
+    }
+
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '10px'
 
     }
 
@@ -202,6 +209,12 @@ function retangulo() {
 
     } 
 
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '78px'
+
+    }
+
 }
 
 function triangulo() {
@@ -282,6 +295,12 @@ function triangulo() {
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '7.5%'
+
+    }
+
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '138px'
 
     }
 
@@ -366,6 +385,12 @@ function losango() {
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '10.35%'
+
+    }
+
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '200px'
 
     }
 
@@ -457,6 +482,12 @@ function trapezio() {
 
     }
 
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '275px'
+
+    }
+
 }
 
 function circulo() {
@@ -528,6 +559,12 @@ function circulo() {
 
     }
 
+    if (maxHeight.matches == true) {
+
+        check.style.marginTop = '343px'
+
+    }
+
 }
 
 function calcular() {
@@ -591,7 +628,7 @@ function calcular() {
 
         area.replace('Área: 0m²', '')
 
-    } else if (bM.value >= 500 || base >= 500 || altura == 500) {
+    } else if (bM >= 500 || base.value >= 500 || altura.value >= 500) {
 
         alert('[ERRO] Limite atingido')
 
@@ -999,7 +1036,7 @@ function calcular() {
 
                 calculo01.style.borderRightWidth = '2px'
 
-                calculo02.style.display = 'none'
+                calculo02.style.borderRightWidth = '2px'
 
                 area.style.borderRightWidth = '2px'
 
@@ -1052,7 +1089,7 @@ function calcular() {
         }, 1500)
 
     }
-
+    
     if (maxWidth.matches == true) {
 
         setTimeout(function () {
