@@ -732,7 +732,7 @@ function calcular() {
 
             if (imgQuadrado.style.display == 'block') { // Quadrado
                 
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.marginTop = '-26.75%'
                 linhaEfeito.style.marginLeft = '84%'
 
                 formula.style.borderRightWidth = '2px'  
@@ -783,7 +783,7 @@ function calcular() {
 
             } else if (imgRetangulo.style.display == 'block') { // Retângulo
 
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.marginTop = '-26.73%'
                 linhaEfeito.style.marginLeft = '83%'
 
                 formula.style.borderRightWidth = '2px'  
@@ -834,8 +834,8 @@ function calcular() {
 
             } else if (imgTriangulo.style.display == 'block') { // Triângulo
 
-                linhaEfeito.style.height = '125px'
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.height = '123px'
+                linhaEfeito.style.marginTop = '-26.75%'
                 linhaEfeito.style.marginLeft = '80%'
 
                 formula.style.borderRightWidth = '2px'  
@@ -897,8 +897,8 @@ function calcular() {
 
             } else if (imgLosango.style.display == 'block') { // Losango
         
-                linhaEfeito.style.height = '125px'
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.height = '123px'
+                linhaEfeito.style.marginTop = '-26.75%'
                 linhaEfeito.style.marginLeft = '80%'
 
                 formula.style.borderRightWidth = '2px'  
@@ -960,8 +960,8 @@ function calcular() {
 
             } else if (imgTrapezio.style.display == 'block') { // Trapézio
 
-                linhaEfeito.style.height = '125px'
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.height = '123px'
+                linhaEfeito.style.marginTop = '-26.75%'
                 linhaEfeito.style.marginLeft = '78%'
 
                 formula.style.borderRightWidth = '2px'  
@@ -1023,8 +1023,8 @@ function calcular() {
 
             } else { // Circulo
 
-                linhaEfeito.style.height = '125px'
-                linhaEfeito.style.marginTop = '-27%'
+                linhaEfeito.style.height = '123px'
+                linhaEfeito.style.marginTop = '-26.75%'
                 linhaEfeito.style.marginLeft = '82%'
 
                 formula.style.borderRightWidth = '2px'  
