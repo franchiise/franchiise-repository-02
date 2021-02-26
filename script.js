@@ -1047,7 +1047,7 @@ function calcular() {
                     calculo00.style.display = 'block'
                     calculo00.style.top = '11%'
                     calculo00.style.left = '83%'
-                    calculo00.innerHTML = `<strong>A = 3.17 x ${base.value}²</strong>`
+                    calculo00.innerHTML = `<strong>A = 3.14 x ${base.value}²</strong>`
                     
                 }, 2000)
 
@@ -1058,7 +1058,7 @@ function calcular() {
                     calculo01.style.display = 'block'
                     calculo01.style.top = '15%'  
                     calculo01.style.left = '83%'
-                    calculo01.innerHTML = `<strong>A = 3.17 x ${Number(base.value)**2}</strong>`
+                    calculo01.innerHTML = `<strong>A = 3.14 x ${Number(base.value)**2}</strong>`
                     
                 }, 3000)
 
@@ -1069,7 +1069,7 @@ function calcular() {
                     calculo02.style.display = 'block'
                     calculo02.style.top = '19%'  
                     calculo02.style.left = '83%'
-                    calculo02.innerHTML = `<strong>A = ${3.17 * (Number(base.value)**2)}</strong>`
+                    calculo02.innerHTML = `<strong>A = ${3.14 * (Number(base.value)**2)}</strong>`
                     
                 }, 4000)
 
@@ -1080,7 +1080,7 @@ function calcular() {
                     area.style.display = 'block'
                     area.style.top = '23%'  
                     area.style.left = '83%'
-                    area.innerHTML = `<strong>Área: ${3.17 * (Number(base.value)**2)}m²</strong>`
+                    area.innerHTML = `<strong>Área: ${3.14 * (Number(base.value)**2)}m²</strong>`
 
                 }, 5000)
 
@@ -1118,7 +1118,7 @@ function calcular() {
 
             } else {
 
-                alert(`\nFórmula: A = 𝜋 × r²\n\nA = 3.17 x ${base.value}²\n\nA = 3.17 x ${(Number(base.value)**2)}\n\nA = ${3.17 * (Number(base.value)**2)}\n\nÁrea: ${3.17 * (Number(base.value)**2)}m²\n`)
+                alert(`\nFórmula: A = 𝜋 × r²\n\nA = 3.14 x ${base.value}²\n\nA = 3.14 x ${(Number(base.value)**2)}\n\nA = ${3.14 * (Number(base.value)**2)}\n\nÁrea: ${3.14 * (Number(base.value)**2)}m²\n`)
 
             }
 
