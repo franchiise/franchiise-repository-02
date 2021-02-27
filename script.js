@@ -65,7 +65,7 @@ function quadrado() {
 
     forma.appendChild(imgQuadrado)
 
-    check.style.marginTop = '15px'
+    check.style.marginTop = '25px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -115,12 +115,6 @@ function quadrado() {
 
     }
 
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '10px'
-
-    }
-
 }
 
 function retangulo() {
@@ -148,7 +142,7 @@ function retangulo() {
 
     forma.appendChild(imgRetangulo)
 
-    check.style.marginTop = '83px'
+    check.style.marginTop = '80.5px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -201,12 +195,6 @@ function retangulo() {
 
         medidas.style.left = '7.5%'
 
-    } 
-
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '78px'
-
     }
 
 }
@@ -236,7 +224,7 @@ function triangulo() {
 
     forma.appendChild(imgTriangulo)
     
-    check.style.marginTop = '143px'
+    check.style.marginTop = '137px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -290,12 +278,6 @@ function triangulo() {
 
     }
 
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '138px'
-
-    }
-
 }
 
 function losango() {
@@ -323,7 +305,7 @@ function losango() {
 
     forma.appendChild(imgLosango)
 
-    check.style.marginTop = '205px'
+    check.style.marginTop = '196px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -378,12 +360,6 @@ function losango() {
 
     }
 
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '200px'
-
-    }
-
 }
 
 function trapezio() {
@@ -411,7 +387,7 @@ function trapezio() {
 
     forma.appendChild(imgTrapezio)
 
-    check.style.marginTop = '280px'
+    check.style.marginTop = '264px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -470,12 +446,6 @@ function trapezio() {
 
     }
 
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '275px'
-
-    }
-
 } 
 
 function circulo() {
@@ -503,7 +473,7 @@ function circulo() {
 
     forma.appendChild(imgCirculo)
 
-    check.style.marginTop = '348px'
+    check.style.marginTop = '319px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
 
@@ -542,12 +512,6 @@ function circulo() {
     } else if (maxWidth.matches != true) {
 
         medidas.style.left = '6.93%'
-
-    }
-
-    if (maxHeight.matches == true) {
-
-        check.style.marginTop = '343px'
 
     }
 
