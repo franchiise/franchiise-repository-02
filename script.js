@@ -15,8 +15,6 @@ let medida01 = document.querySelector('#medida01')
 
 let resultado = document.querySelector('#resultado')
 
-let linhaEfeito = document.querySelector('#linhaEfeito')
-
 let formula = document.querySelector('#formula')
 let calculo00 = document.querySelector('#calculo00')
 let calculo01 = document.querySelector('#calculo01')
@@ -77,8 +75,6 @@ function quadrado() {
 
     }, 500)
 
-    linhaEfeito.style.height = '0px'
-
     formula.style.display = 'none'
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
@@ -113,7 +109,7 @@ function quadrado() {
 
         medidas.style.left = '41%'
 
-    } else if (maxWidth.matches != true) {
+    } else {
 
         medidas.style.left = '9.75%'
 
@@ -166,8 +162,6 @@ function retangulo() {
     altura.disabled = false
 
     button.disabled = false
-
-    linhaEfeito.style.height = '0px'
 
     formula.style.display = 'none'
     calculo00.style.display = 'none'
@@ -251,8 +245,6 @@ function triangulo() {
         imgTriangulo.style.animation = '360s rotateForma infinite'
 
     }, 500)
-
-    linhaEfeito.style.height = '0px'
 
     formula.style.display = 'none'
     calculo00.style.display = 'none'
@@ -340,8 +332,6 @@ function losango() {
         imgLosango.style.animation = '360s rotateForma infinite'
 
     }, 500)
-
-    linhaEfeito.style.height = '0px'
 
     formula.style.display = 'none'
     calculo00.style.display = 'none'
@@ -431,8 +421,6 @@ function trapezio() {
 
     }, 500)
 
-    linhaEfeito.style.height = '0px'
-
     formula.style.display = 'none'
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
@@ -488,7 +476,7 @@ function trapezio() {
 
     }
 
-}
+} 
 
 function circulo() {
 
@@ -518,8 +506,6 @@ function circulo() {
     check.style.marginTop = '348px'
     check.style.opacity = '1'
     check.style.transition = '250ms'
-
-    linhaEfeito.style.height = '0px'
 
     formula.style.display = 'none'
     calculo00.style.display = 'none'
@@ -567,562 +553,546 @@ function circulo() {
 
 }
 
-function calcular() {
-    
-    medidas.style.display = 'block'
+function calcular() {    
 
-    // ---------- // ---------- //
-
-    var bM = Number(baseMenor.value) 
-    var b = Number(base.value) 
-    var h = Number(altura.value) 
-
-    bM = bM * 3.780        
-    b = b * 3.780
-    h = h * 3.780
-
-    // -------------------- // -------------------- //
-
-    let widthQuadrado = imgQuadrado.offsetWidth
-
-    let widthRetangulo = imgRetangulo.offsetWidth
-    let heightRetangulo = imgRetangulo.offsetHeight
-    
-    let widthTriangulo = imgTriangulo.offsetWidth
-    let heightTriangulo = imgTriangulo.offsetWidth
-    
-    let widthLosango = imgLosango.offsetWidth
-    let heightLosango = imgLosango.offsetHeight
-    
-    let widthTrapezio = imgTrapezio.offsetWidth
-    let widthMenorTrapezio = imgTrapezio.offsetWidth
-    let heightTrapezio = imgTrapezio.offsetHeight
-    
-    let widthCirculo = imgCirculo.offsetWidth
- 
-    // -------------------- // -------------------- //
-
-    let resQuadradoWidth = b + widthQuadrado
-
-    let resRetanguloWidth = b + widthRetangulo
-    let resRetanguloHeight = h + heightRetangulo
-
-    let resTrianguloWidth = b + widthTriangulo
-    let resTrianguloHeight = h + heightTriangulo
-
-    let resLosangoWidth = b + widthLosango
-    let resLosangoHeight = h + heightLosango
-
-    let resTrapezioWidth = b + widthTrapezio + (widthMenorTrapezio/2)
-    let resTrapezioHeight = h + heightTrapezio
-
-    let resCirculoWidth = b + widthCirculo
-
-    // --------------- // --------------- // --------------- // --------------- //
-
-    if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
+    if (imgTrapezio.style.display == 'block' && baseMenor.value.length == 0) {
 
         alert('[ERRO] Preencha todos os dados')
 
         location.reload()
 
-        area.replace('Área: 0m²', '')
-
-    } else if (bM >= 500 || base.value >= 500 || altura.value >= 500) {
-
-        alert('[ERRO] Limite atingido')
-
-        location.reload()
-
     } else {
-
-        imgQuadrado.style.transition = '250ms'
-        imgRetangulo.style.transition = '250ms'
-        imgTriangulo.style.transition = '250ms'
         
-        imgLosango.style.transition = '250ms'
-        imgTrapezio.style.transition = '250ms'
-        imgCirculo.style.transition = '250ms'
+        medidas.style.display = 'block'
 
-        imgQuadrado.style.animation = '2s resetRotateForma'
-        imgRetangulo.style.animation = '2s resetRotateForma'
-        imgTriangulo.style.animation = '2s resetRotateForma'
+        // ---------- // ---------- //
 
-        imgLosango.style.animation = '2s resetRotateForma'
-        imgTrapezio.style.animation = '2s resetRotateForma'
-        imgCirculo.style.animation = '2s resetRotateForma'
+        var bM = Number(baseMenor.value) 
+        var b = Number(base.value) 
+        var h = Number(altura.value) 
 
-        baseMenor.disabled = true
-        base.disabled = true
-        altura.disabled = true
+        bM = bM * 3.780        
+        b = b * 3.780
+        h = h * 3.780
 
-        button.disabled = true
+        // -------------------- // -------------------- //
 
-        if (maxWidth.matches != true && (bM >= 100 || b >= 100 || h >= 100)) {
+        let widthQuadrado = imgQuadrado.offsetWidth
 
-            imgQuadrado.style.width = 350 + 'px'
-            imgQuadrado.style.height = 350 + 'px'
-            
-            imgRetangulo.style.width = 400 + 'px'
-            imgRetangulo.style.height = 300 + 'px'
-
-            imgTriangulo.style.width = 300 + 'px'
-            imgTriangulo.style.height = 280 + 'px'
-
-            imgLosango.style.width = 300 + 'px'
-            imgLosango.style.height = 480 + 'px'
-
-            imgTrapezio.style.width = 450 + 'px'
-            imgTrapezio.style.height = 350 + 'px'
-
-            imgCirculo.style.width = 350 + 'px'
-            imgCirculo.style.height = 350 + 'px'
+        let widthRetangulo = imgRetangulo.offsetWidth
+        let heightRetangulo = imgRetangulo.offsetHeight
         
-        } else if (maxWidth.matches == true || (bM.value >= 75 || b.value >= 75 || h.value >= 75)) {
+        let widthTriangulo = imgTriangulo.offsetWidth
+        let heightTriangulo = imgTriangulo.offsetWidth
+        
+        let widthLosango = imgLosango.offsetWidth
+        let heightLosango = imgLosango.offsetHeight
+        
+        let widthTrapezio = imgTrapezio.offsetWidth
+        let widthMenorTrapezio = imgTrapezio.offsetWidth
+        let heightTrapezio = imgTrapezio.offsetHeight
+        
+        let widthCirculo = imgCirculo.offsetWidth
+    
+        // -------------------- // -------------------- //
 
-            imgQuadrado.style.width = 190 + 'px'
-            imgQuadrado.style.height = 190 + 'px'
-                    
-            imgRetangulo.style.width = 230 + 'px'
-            imgRetangulo.style.height = 160 + 'px'
-        
-            imgTriangulo.style.width = 190 + 'px'
-            imgTriangulo.style.height = 170 + 'px'
-        
-            imgLosango.style.width = 170 + 'px'
-            imgLosango.style.height = 250 + 'px'
-        
-            imgTrapezio.style.width = 230 + 'px'
-            imgTrapezio.style.height = 140 + 'px'
-        
-            imgCirculo.style.width = 190 + 'px'
-            imgCirculo.style.height = 190 + 'px'
+        let resQuadradoWidth = b + widthQuadrado
+
+        let resRetanguloWidth = b + widthRetangulo
+        let resRetanguloHeight = h + heightRetangulo
+
+        let resTrianguloWidth = b + widthTriangulo
+        let resTrianguloHeight = h + heightTriangulo
+
+        let resLosangoWidth = b + widthLosango
+        let resLosangoHeight = h + heightLosango
+
+        let resTrapezioWidth = b + widthTrapezio + (widthMenorTrapezio/2)
+        let resTrapezioHeight = h + heightTrapezio
+
+        let resCirculoWidth = b + widthCirculo
+
+        // --------------- // --------------- // --------------- // --------------- //
+
+        if (base.value.length == 0 || altura.value.length == 0 && altura.disabled != true) {
+
+            alert('[ERRO] Preencha todos os dados')
+
+            location.reload()
+
+            area.replace('Área: 0m²', '')
+
+        } else if (bM >= 500 || base.value >= 500 || altura.value >= 500) {
+
+            alert('[ERRO] Limite atingido')
+
+            location.reload()
 
         } else {
 
-            imgQuadrado.style.width = resQuadradoWidth + 'px'
-            imgQuadrado.style.height = resQuadradoWidth + 'px'
+            imgQuadrado.style.transition = '250ms'
+            imgRetangulo.style.transition = '250ms'
+            imgTriangulo.style.transition = '250ms'
+            
+            imgLosango.style.transition = '250ms'
+            imgTrapezio.style.transition = '250ms'
+            imgCirculo.style.transition = '250ms'
 
-            imgRetangulo.style.width = resRetanguloWidth + 'px'
-            imgRetangulo.style.height = resRetanguloHeight + 'px'
+            imgQuadrado.style.animation = '2s resetRotateForma'
+            imgRetangulo.style.animation = '2s resetRotateForma'
+            imgTriangulo.style.animation = '2s resetRotateForma'
 
-            imgTriangulo.style.width = resTrianguloWidth + 'px'
-            imgTriangulo.style.height = resTrianguloHeight + 'px'
+            imgLosango.style.animation = '2s resetRotateForma'
+            imgTrapezio.style.animation = '2s resetRotateForma'
+            imgCirculo.style.animation = '2s resetRotateForma'
 
-            imgLosango.style.width = resLosangoWidth + 'px'
-            imgLosango.style.height = resLosangoHeight + 'px'
+            baseMenor.disabled = true
+            base.disabled = true
+            altura.disabled = true
 
-            imgTrapezio.style.width = resTrapezioWidth + 'px'
-            imgTrapezio.style.height = resTrapezioHeight + 'px'
+            button.disabled = true
 
-            imgCirculo.style.width = resCirculoWidth + 'px'
-            imgCirculo.style.height = resCirculoWidth + 'px'
+            if (maxWidth.matches != true && (bM >= 100 || b >= 100 || h >= 100)) {
 
-        }
-
-    }
-
-    if (maxWidth.matches != true) {
-
-        setTimeout(function calcularArea() {
-
-            linhaEfeito.style.height = '95px'
-
-            formula.style.display = 'block'
-
-            if (imgQuadrado.style.display == 'block') { // Quadrado
+                imgQuadrado.style.width = 350 + 'px'
+                imgQuadrado.style.height = 350 + 'px'
                 
-                linhaEfeito.style.marginTop = '-26.75%'
-                linhaEfeito.style.marginLeft = '84%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '85%'
-                formula.innerHTML = `<strong>Fórmula: A = L²</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.display = 'none'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaQuadrado00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '85%'
-                    calculo00.innerHTML = `<strong>A = ${base.value}²</strong>`
-                    
-                }, 1500)
-
-                setTimeout(function areaQuadrado01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '85%'
-                    calculo01.innerHTML = `<strong>A = ${Number(base.value)**2}</strong>`
-                    
-                }, 2500)
-
-                setTimeout(function areaQuadrado02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '19%'  
-                    area.style.left = '85%'
-                    area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`
-
-                }, 3500)
-
-            } else if (imgRetangulo.style.display == 'block') { // Retângulo
-
-                linhaEfeito.style.marginTop = '-26.73%'
-                linhaEfeito.style.marginLeft = '83%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '84%'
-                formula.innerHTML = `<strong>Fórmula: A = B x h</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.display = 'none'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaRetangulo00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '84%'
-                    calculo00.innerHTML = `<strong>A = ${base.value} x ${altura.value}</strong>`
-                    
-                }, 1500)
-
-                setTimeout(function areaRetangulo01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '84%'
-                    calculo01.innerHTML = `<strong>A = ${Number(base.value) * Number(altura.value)}</strong>`
-                    
-                }, 2500)
-
-                setTimeout(function areaRetangulo02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '19%'  
-                    area.style.left = '84%'
-                    area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`
-
-                }, 3500)
-
-            } else if (imgTriangulo.style.display == 'block') { // Triângulo
-
-                linhaEfeito.style.height = '123px'
-                linhaEfeito.style.marginTop = '-26.75%'
-                linhaEfeito.style.marginLeft = '80%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '81%'
-                formula.innerHTML = `<strong>Fórmula: A = (B x h)/2</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.borderRightWidth = '2px'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaTriangulo00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '81%'
-                    calculo00.innerHTML = `<strong>A = (${base.value} x ${altura.value})/2</strong>`
-                    
-                }, 2000)
-
-                setTimeout(function areaTriangulo01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '81%'
-                    calculo01.innerHTML = `<strong>A = ${(Number(base.value) * Number(altura.value))}/2</strong>`
-                    
-                }, 3000)
-
-                setTimeout(function areaTriangulo02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-                    
-                    calculo02.style.display = 'block'
-                    calculo02.style.top = '19%'  
-                    calculo02.style.left = '81%'
-                    calculo02.innerHTML = `<strong>A = ${(Number(base.value) * Number(altura.value))/2}</strong>`
-
-                }, 4000)
-                
-                setTimeout(function areaTriangulo03() {
-
-                    calculo02.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '23%'  
-                    area.style.left = '81%'
-                    area.innerHTML = `<strong>Área: ${(Number(base.value) * Number(altura.value))/2}m²</strong>`
-
-                }, 5000)
-
-            } else if (imgLosango.style.display == 'block') { // Losango
-        
-                linhaEfeito.style.height = '123px'
-                linhaEfeito.style.marginTop = '-26.75%'
-                linhaEfeito.style.marginLeft = '80%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '81%'
-                formula.innerHTML = `<strong>Fórmula: A = (D x d)/2</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.borderRightWidth = '2px'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaLosango00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '81%'
-                    calculo00.innerHTML = `<strong>A = (${altura.value} x ${base.value})/2</strong>`
-                    
-                }, 2000)
-
-                setTimeout(function areaLosango01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '81%'
-                    calculo01.innerHTML = `<strong>A = ${(Number(altura.value) * Number(base.value))}/2</strong>`
-                    
-                }, 3000)
-
-                setTimeout(function areaLosango02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-                    
-                    calculo02.style.display = 'block'
-                    calculo02.style.top = '19%'  
-                    calculo02.style.left = '81%'
-                    calculo02.innerHTML = `<strong>A: ${(Number(altura.value) * Number(base.value))/2}</strong>`
-
-                }, 4000)
-                
-                setTimeout(function areaLosango03() {
-
-                    calculo02.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '23%'  
-                    area.style.left = '81%'
-                    area.innerHTML = `<strong>Área: ${(Number(altura.value) * Number(base.value))/2}m²</strong>`
-
-                }, 5000)
-
-            } else if (imgTrapezio.style.display == 'block') { // Trapézio
-
-                linhaEfeito.style.height = '123px'
-                linhaEfeito.style.marginTop = '-26.75%'
-                linhaEfeito.style.marginLeft = '78%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '79%'
-                formula.innerHTML = `<strong>Fórmula: A = (B + b) x h/2</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.borderRightWidth = '2px'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaTrapezio00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '79%'
-                    calculo00.innerHTML = `<strong>A = (${base.value} + ${baseMenor.value}) x ${altura.value}/2</strong>`
-                    
-                }, 2000)
-
-                setTimeout(function areaTrapezio01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '79%'
-                    calculo01.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)/2}</strong>`
-                    
-                }, 3000)
-
-                setTimeout(function areaTrapezio02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-                    
-                    calculo02.style.display = 'block'
-                    calculo02.style.top = '19%'  
-                    calculo02.style.left = '79%'
-                    calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}</strong>`
-
-                }, 4000)
-                
-                setTimeout(function areaTrapezio03() {
-
-                    calculo02.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '23%'  
-                    area.style.left = '79%'
-                    area.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
-
-                }, 5000)
-
-            } else { // Circulo
-
-                linhaEfeito.style.height = '123px'
-                linhaEfeito.style.marginTop = '-26.75%'
-                linhaEfeito.style.marginLeft = '82%'
-
-                formula.style.borderRightWidth = '2px'  
-                formula.style.top = '7%'
-                formula.style.left = '83%'
-                formula.innerHTML = `<strong>Fórmula: A = 𝜋 × r²</strong>`
-
-                calculo00.style.borderRightWidth = '2px'  
-
-                calculo01.style.borderRightWidth = '2px'
-
-                calculo02.style.borderRightWidth = '2px'
-
-                area.style.borderRightWidth = '2px'
-
-                setTimeout(function areaCirculo00() {
-
-                    formula.style.borderRightWidth = '0px'
-
-                    calculo00.style.display = 'block'
-                    calculo00.style.top = '11%'
-                    calculo00.style.left = '83%'
-                    calculo00.innerHTML = `<strong>A = 3.14 x ${base.value}²</strong>`
-                    
-                }, 2000)
-
-                setTimeout(function areaCirculo01() {
-
-                    calculo00.style.borderRightWidth = '0px'
-
-                    calculo01.style.display = 'block'
-                    calculo01.style.top = '15%'  
-                    calculo01.style.left = '83%'
-                    calculo01.innerHTML = `<strong>A = 3.14 x ${Number(base.value)**2}</strong>`
-                    
-                }, 3000)
-
-                setTimeout(function areaCirculo02() {
-
-                    calculo01.style.borderRightWidth = '0px'
-
-                    calculo02.style.display = 'block'
-                    calculo02.style.top = '19%'  
-                    calculo02.style.left = '83%'
-                    calculo02.innerHTML = `<strong>A = ${3.14 * (Number(base.value)**2)}</strong>`
-                    
-                }, 4000)
-
-                setTimeout(function areaCirculo03() {
-
-                    calculo02.style.borderRightWidth = '0px'
-                    
-                    area.style.display = 'block'
-                    area.style.top = '23%'  
-                    area.style.left = '83%'
-                    area.innerHTML = `<strong>Área: ${3.14 * (Number(base.value)**2)}m²</strong>`
-
-                }, 5000)
-
-            }  
-
-        }, 1500)
-
-    }
-    
-    if (maxWidth.matches == true) {
-
-        setTimeout(function () {
-
-            linhaEfeito.style.height = '0px'
-
-            if (imgQuadrado.style.display == 'block') {
-
-                alert(`\nFórmula: A = L²\n\nA = ${base.value}²\n\nA = ${Number(base.value)**2}\n\nÁrea: ${Number(base.value)**2}m²\n`)
-
-            } else if (imgRetangulo.style.display == 'block') {
-
-                alert(`\nFórmula: A = B x h\n\nA = ${base.value} x ${altura.value}\n\nA = ${Number(base.value) * Number(altura.value)}\n\nÁrea: ${Number(base.value) * Number(altura.value)}m²\n`)
-
-            } else if (imgTriangulo.style.display == 'block') {
-
-                alert(`\nFórmula: A = (B x h)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) * Number(altura.value))/2}m²\n`)
-
-            } else if (imgLosango.style.display == 'block') {
-
-                alert(`\nFórmula: A = (D x d)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea = ${(Number(base.value) * Number(altura.value))/2}m²\n`)
-
-            } else if (imgTrapezio.style.display == 'block') {
-
-                alert(`\nFórmula: A = (B + b) x h/2\n\nA = (${base.value} + ${baseMenor.value}) x ${altura.value}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
+                imgRetangulo.style.width = 400 + 'px'
+                imgRetangulo.style.height = 300 + 'px'
+
+                imgTriangulo.style.width = 300 + 'px'
+                imgTriangulo.style.height = 280 + 'px'
+
+                imgLosango.style.width = 300 + 'px'
+                imgLosango.style.height = 480 + 'px'
+
+                imgTrapezio.style.width = 450 + 'px'
+                imgTrapezio.style.height = 350 + 'px'
+
+                imgCirculo.style.width = 350 + 'px'
+                imgCirculo.style.height = 350 + 'px'
+            
+            } else if (maxWidth.matches == true || (bM.value >= 75 || b.value >= 75 || h.value >= 75)) {
+
+                imgQuadrado.style.width = 190 + 'px'
+                imgQuadrado.style.height = 190 + 'px'
+                        
+                imgRetangulo.style.width = 230 + 'px'
+                imgRetangulo.style.height = 160 + 'px'
+            
+                imgTriangulo.style.width = 190 + 'px'
+                imgTriangulo.style.height = 170 + 'px'
+            
+                imgLosango.style.width = 170 + 'px'
+                imgLosango.style.height = 250 + 'px'
+            
+                imgTrapezio.style.width = 230 + 'px'
+                imgTrapezio.style.height = 140 + 'px'
+            
+                imgCirculo.style.width = 190 + 'px'
+                imgCirculo.style.height = 190 + 'px'
 
             } else {
 
-                alert(`\nFórmula: A = 𝜋 × r²\n\nA = 3.14 x ${base.value}²\n\nA = 3.14 x ${(Number(base.value)**2)}\n\nA = ${3.14 * (Number(base.value)**2)}\n\nÁrea: ${3.14 * (Number(base.value)**2)}m²\n`)
+                imgQuadrado.style.width = resQuadradoWidth + 'px'
+                imgQuadrado.style.height = resQuadradoWidth + 'px'
+
+                imgRetangulo.style.width = resRetanguloWidth + 'px'
+                imgRetangulo.style.height = resRetanguloHeight + 'px'
+
+                imgTriangulo.style.width = resTrianguloWidth + 'px'
+                imgTriangulo.style.height = resTrianguloHeight + 'px'
+
+                imgLosango.style.width = resLosangoWidth + 'px'
+                imgLosango.style.height = resLosangoHeight + 'px'
+
+                imgTrapezio.style.width = resTrapezioWidth + 'px'
+                imgTrapezio.style.height = resTrapezioHeight + 'px'
+
+                imgCirculo.style.width = resCirculoWidth + 'px'
+                imgCirculo.style.height = resCirculoWidth + 'px'
 
             }
 
-        }, 1250)
+        }
+
+        if (maxWidth.matches != true) {
+
+            setTimeout(function calcularArea() {
+
+                formula.style.display = 'block'
+
+                if (imgQuadrado.style.display == 'block') { // Quadrado
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '82%'
+                    formula.innerHTML = `<strong>Fórmula: A = L²</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.display = 'none'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaQuadrado00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '82%'
+                        calculo00.innerHTML = `<strong>A = ${base.value}²</strong>`
+                        
+                    }, 1500)
+
+                    setTimeout(function areaQuadrado01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '82%'
+                        calculo01.innerHTML = `<strong>A = ${Number(base.value)**2}</strong>`
+                        
+                    }, 2500)
+
+                    setTimeout(function areaQuadrado02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '19%'  
+                        area.style.left = '82%'
+                        area.innerHTML = `<strong>Área: ${Number(base.value) * Number(base.value)}m²</strong>`
+
+                    }, 3500)
+
+                } else if (imgRetangulo.style.display == 'block') { // Retângulo
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '81%'
+                    formula.innerHTML = `<strong>Fórmula: A = B x h</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.display = 'none'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaRetangulo00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '81%'
+                        calculo00.innerHTML = `<strong>A = ${base.value} x ${altura.value}</strong>`
+                        
+                    }, 1500)
+
+                    setTimeout(function areaRetangulo01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '81%'
+                        calculo01.innerHTML = `<strong>A = ${Number(base.value) * Number(altura.value)}</strong>`
+                        
+                    }, 2500)
+
+                    setTimeout(function areaRetangulo02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '19%'  
+                        area.style.left = '81%'
+                        area.innerHTML = `<strong>Área: ${Number(base.value) * Number(altura.value)}m²</strong>`
+
+                    }, 3500)
+
+                } else if (imgTriangulo.style.display == 'block') { // Triângulo
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '78%'
+                    formula.innerHTML = `<strong>Fórmula: A = (B x h)/2</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.borderRightWidth = '2px'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaTriangulo00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '78%'
+                        calculo00.innerHTML = `<strong>A = (${base.value} x ${altura.value})/2</strong>`
+                        
+                    }, 2000)
+
+                    setTimeout(function areaTriangulo01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '78%'
+                        calculo01.innerHTML = `<strong>A = ${(Number(base.value) * Number(altura.value))}/2</strong>`
+                        
+                    }, 3000)
+
+                    setTimeout(function areaTriangulo02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+                        
+                        calculo02.style.display = 'block'
+                        calculo02.style.top = '19%'  
+                        calculo02.style.left = '78%'
+                        calculo02.innerHTML = `<strong>A = ${(Number(base.value) * Number(altura.value))/2}</strong>`
+
+                    }, 4000)
+                    
+                    setTimeout(function areaTriangulo03() {
+
+                        calculo02.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '23%'  
+                        area.style.left = '78%'
+                        area.innerHTML = `<strong>Área: ${(Number(base.value) * Number(altura.value))/2}m²</strong>`
+
+                    }, 5000)
+
+                } else if (imgLosango.style.display == 'block') { // Losango
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '78%'
+                    formula.innerHTML = `<strong>Fórmula: A = (D x d)/2</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.borderRightWidth = '2px'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaLosango00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '78%'
+                        calculo00.innerHTML = `<strong>A = (${altura.value} x ${base.value})/2</strong>`
+                        
+                    }, 2000)
+
+                    setTimeout(function areaLosango01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '78%'
+                        calculo01.innerHTML = `<strong>A = ${(Number(altura.value) * Number(base.value))}/2</strong>`
+                        
+                    }, 3000)
+
+                    setTimeout(function areaLosango02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+                        
+                        calculo02.style.display = 'block'
+                        calculo02.style.top = '19%'  
+                        calculo02.style.left = '78%'
+                        calculo02.innerHTML = `<strong>A: ${(Number(altura.value) * Number(base.value))/2}</strong>`
+
+                    }, 4000)
+                    
+                    setTimeout(function areaLosango03() {
+
+                        calculo02.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '23%'  
+                        area.style.left = '78%'
+                        area.innerHTML = `<strong>Área: ${(Number(altura.value) * Number(base.value))/2}m²</strong>`
+
+                    }, 5000)
+
+                } else if (imgTrapezio.style.display == 'block') { // Trapézio
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '76%'
+                    formula.innerHTML = `<strong>Fórmula: A = (B + b) x h/2</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.borderRightWidth = '2px'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaTrapezio00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '76%'
+                        calculo00.innerHTML = `<strong>A = (${base.value} + ${baseMenor.value}) x ${altura.value}/2</strong>`
+                        
+                    }, 2000)
+
+                    setTimeout(function areaTrapezio01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '76%'
+                        calculo01.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)/2}</strong>`
+                        
+                    }, 3000)
+
+                    setTimeout(function areaTrapezio02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+                        
+                        calculo02.style.display = 'block'
+                        calculo02.style.top = '19%'  
+                        calculo02.style.left = '76%'
+                        calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}</strong>`
+
+                    }, 4000)
+                    
+                    setTimeout(function areaTrapezio03() {
+
+                        calculo02.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '23%'  
+                        area.style.left = '76%'
+                        area.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
+
+                    }, 5000)
+
+                } else { // Circulo
+
+                    formula.style.borderRightWidth = '2px'  
+                    formula.style.top = '7%'
+                    formula.style.left = '80%'
+                    formula.innerHTML = `<strong>Fórmula: A = 𝜋 × r²</strong>`
+
+                    calculo00.style.borderRightWidth = '2px'  
+
+                    calculo01.style.borderRightWidth = '2px'
+
+                    calculo02.style.borderRightWidth = '2px'
+
+                    area.style.borderRightWidth = '2px'
+
+                    setTimeout(function areaCirculo00() {
+
+                        formula.style.borderRightWidth = '0px'
+
+                        calculo00.style.display = 'block'
+                        calculo00.style.top = '11%'
+                        calculo00.style.left = '80%'
+                        calculo00.innerHTML = `<strong>A = 3.14 x ${base.value}²</strong>`
+                        
+                    }, 2000)
+
+                    setTimeout(function areaCirculo01() {
+
+                        calculo00.style.borderRightWidth = '0px'
+
+                        calculo01.style.display = 'block'
+                        calculo01.style.top = '15%'  
+                        calculo01.style.left = '80%'
+                        calculo01.innerHTML = `<strong>A = 3.14 x ${Number(base.value)**2}</strong>`
+                        
+                    }, 3000)
+
+                    setTimeout(function areaCirculo02() {
+
+                        calculo01.style.borderRightWidth = '0px'
+
+                        calculo02.style.display = 'block'
+                        calculo02.style.top = '19%'  
+                        calculo02.style.left = '80%'
+                        calculo02.innerHTML = `<strong>A = ${3.14 * (Number(base.value)**2)}</strong>`
+                        
+                    }, 4000)
+
+                    setTimeout(function areaCirculo03() {
+
+                        calculo02.style.borderRightWidth = '0px'
+                        
+                        area.style.display = 'block'
+                        area.style.top = '23%'  
+                        area.style.left = '80%'
+                        area.innerHTML = `<strong>Área: ${3.14 * (Number(base.value)**2)}m²</strong>`
+
+                    }, 5000)
+
+                }  
+
+            }, 1500)
+
+        }
+        
+        if (maxWidth.matches == true) {
+
+            setTimeout(function () {
+
+                if (imgQuadrado.style.display == 'block') {
+
+                    alert(`\nFórmula: A = L²\n\nA = ${base.value}²\n\nA = ${Number(base.value)**2}\n\nÁrea: ${Number(base.value)**2}m²\n`)
+
+                } else if (imgRetangulo.style.display == 'block') {
+
+                    alert(`\nFórmula: A = B x h\n\nA = ${base.value} x ${altura.value}\n\nA = ${Number(base.value) * Number(altura.value)}\n\nÁrea: ${Number(base.value) * Number(altura.value)}m²\n`)
+
+                } else if (imgTriangulo.style.display == 'block') {
+
+                    alert(`\nFórmula: A = (B x h)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) * Number(altura.value))/2}m²\n`)
+
+                } else if (imgLosango.style.display == 'block') {
+
+                    alert(`\nFórmula: A = (D x d)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea = ${(Number(base.value) * Number(altura.value))/2}m²\n`)
+
+                } else if (imgTrapezio.style.display == 'block') {
+
+                    alert(`\nFórmula: A = (B + b) x h/2\n\nA = (${base.value} + ${baseMenor.value}) x ${altura.value}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
+
+                } else {
+
+                    alert(`\nFórmula: A = 𝜋 × r²\n\nA = 3.14 x ${base.value}²\n\nA = 3.14 x ${(Number(base.value)**2)}\n\nA = ${3.14 * (Number(base.value)**2)}\n\nÁrea: ${3.14 * (Number(base.value)**2)}m²\n`)
+
+                }
+
+            }, 1250)
+
+        }
 
     }
 
