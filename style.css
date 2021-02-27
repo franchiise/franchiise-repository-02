@@ -758,3 +758,18 @@ button:hover {
     }
 
 }
+
+@media (min-height: 700px) {
+
+    #medidas {
+
+        position: absolute;
+        top: 87%;
+        left: 20%;
+    
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);      
+
+    }
+
+}
