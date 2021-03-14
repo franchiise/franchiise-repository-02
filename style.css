@@ -413,6 +413,54 @@ h3 {
 
 }
 
+#calculo03 {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 23%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
+#calculo04 {
+
+    font-size: 1.1em;
+
+    position: absolute;
+    top: 27%;
+    left: 85%;
+
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(0, 0, 0);
+
+    white-space: nowrap;
+    max-width: 0vw; 
+    overflow: hidden;
+
+    animation: cursorBlink 1500ms steps(40) infinite normal, typing 10000ms steps(190) normal 1 both;
+
+    display: none;
+
+    z-index: 2;
+
+}
+
 #area {
 
     font-size: 1.1em;

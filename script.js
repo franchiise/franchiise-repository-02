@@ -18,6 +18,9 @@ let resultado = document.querySelector('#resultado')
 let formula = document.querySelector('#formula')
 let calculo00 = document.querySelector('#calculo00')
 let calculo01 = document.querySelector('#calculo01')
+let calculo02 = document.querySelector('#calculo02')
+let calculo03 = document.querySelector('#calculo03')
+let calculo04 = document.querySelector('#calculo04')
 let area = document.querySelector('#area')
 
 let medidas = document.querySelector('#medidas')
@@ -413,6 +416,8 @@ function trapezio() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     baseMenor.disabled = false
@@ -927,6 +932,10 @@ function calcular() {
 
                     calculo02.style.borderRightWidth = '2px'
 
+                    calculo03.style.borderRightWidth = '2px'
+
+                    calculo04.style.borderRightWidth = '2px'
+
                     area.style.borderRightWidth = '2px'
 
                     setTimeout(function areaTrapezio00() {
@@ -958,20 +967,31 @@ function calcular() {
                         calculo02.style.display = 'block'
                         calculo02.style.top = '19%'  
                         calculo02.style.left = '76%'
-                        calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}</strong>`
+                        calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2</strong>`
 
                     }, 4000)
-                    
+
                     setTimeout(function areaTrapezio03() {
 
                         calculo02.style.borderRightWidth = '0px'
                         
-                        area.style.display = 'block'
-                        area.style.top = '23%'  
-                        area.style.left = '76%'
-                        area.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
+                        calculo03.style.display = 'block'
+                        calculo03.style.top = '23%'  
+                        calculo03.style.left = '76%'
+                        calculo03.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}</strong>`
 
                     }, 5000)
+                    
+                    setTimeout(function areaTrapezio04() {
+
+                        calculo03.style.borderRightWidth = '0px'
+                        
+                        calculo04.style.display = 'block'
+                        calculo04.style.top = '27%'  
+                        calculo04.style.left = '76%'
+                        calculo04.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
+
+                    }, 6000)
 
                 } else { // Circulo
 
