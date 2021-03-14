@@ -1060,7 +1060,7 @@ function calcular() {
 
                 } else if (n == 5) {
 
-                    alert(`\nFórmula: A = ((B + b) x h)/2\n\nA = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
+                    alert(`\nFórmula: A = ((B + b) x h)/2\n\nA = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2\n\nA = (${(Number(base.value) + Number(baseMenor.value))} x ${(Number(altura.value))})/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
 
                 } else {
 
