@@ -86,6 +86,8 @@ function quadrado() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     base.disabled = false
@@ -170,6 +172,8 @@ function retangulo() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     labelBaseMenor.style.display = 'none'
@@ -249,6 +253,8 @@ function triangulo() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     base.disabled = false
@@ -332,6 +338,8 @@ function losango() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     base.disabled = false
@@ -500,6 +508,8 @@ function circulo() {
     calculo00.style.display = 'none'
     calculo01.style.display = 'none'
     calculo02.style.display = 'none'
+    calculo03.style.display = 'none'
+    calculo04.style.display = 'none'
     area.style.display = 'none'
 
     button.disabled = false
@@ -923,7 +933,7 @@ function calcular() {
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
-                    formula.style.left = '76%'
+                    formula.style.left = '74%'
                     formula.innerHTML = `<strong>Fórmula: A = ((B + b) x h)/2</strong>`
 
                     calculo00.style.borderRightWidth = '2px'  
@@ -944,7 +954,7 @@ function calcular() {
 
                         calculo00.style.display = 'block'
                         calculo00.style.top = '11%'
-                        calculo00.style.left = '76%'
+                        calculo00.style.left = '74%'
                         calculo00.innerHTML = `<strong>A = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2</strong>`
                         
                     }, 3000)
@@ -955,7 +965,7 @@ function calcular() {
 
                         calculo01.style.display = 'block'
                         calculo01.style.top = '15%'  
-                        calculo01.style.left = '76%'
+                        calculo01.style.left = '74%'
                         calculo01.innerHTML = `<strong>A = (${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)})/2</strong>`
                         
                     }, 4000)
@@ -966,7 +976,7 @@ function calcular() {
                         
                         calculo02.style.display = 'block'
                         calculo02.style.top = '19%'  
-                        calculo02.style.left = '76%'
+                        calculo02.style.left = '74%'
                         calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2</strong>`
 
                     }, 6000)
@@ -977,10 +987,10 @@ function calcular() {
                         
                         calculo03.style.display = 'block'
                         calculo03.style.top = '23%'  
-                        calculo03.style.left = '76%'
+                        calculo03.style.left = '74%'
                         calculo03.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}</strong>`
 
-                    }, 7000)
+                    }, 6500)
                     
                     setTimeout(function areaTrapezio04() {
 
@@ -988,10 +998,10 @@ function calcular() {
                         
                         calculo04.style.display = 'block'
                         calculo04.style.top = '27%'  
-                        calculo04.style.left = '76%'
+                        calculo04.style.left = '74%'
                         calculo04.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
 
-                    }, 8000)
+                    }, 7500)
 
                 } else { // Circulo
 
