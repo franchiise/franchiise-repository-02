@@ -62,7 +62,7 @@ Para calcular a área de um losango, é necessário dividir a figura traçando a
 
 ![](https://www.coc.com.br/gallery/repository/uploads/blog/2019/janeiro/area-de-figuras-planas/4.jpg)
 
-* A = (B + b) x h/2
+* A = ((B + b) x h)/2
 * A: Área
 * B: Base maior
 * b: Base menor

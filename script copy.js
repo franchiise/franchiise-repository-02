@@ -40,11 +40,7 @@ let button = document.querySelector('#button')
 var maxWidth = window.matchMedia('(max-width: 500px)')
 var maxHeight = window.matchMedia('(max-height: 720px)')
 
-var n = 0
-
 function quadrado() {
-
-    n = 1
 
     medidas.style.display = 'block'
         
@@ -122,8 +118,6 @@ function quadrado() {
 }
 
 function retangulo() {
-
-    n = 2
 
     medidas.style.display = 'block'
 
@@ -207,8 +201,6 @@ function retangulo() {
 
 function triangulo() {
 
-    n = 3
-
     medidas.style.display = 'block'
 
     imgQuadrado.style.display = 'none'
@@ -289,8 +281,6 @@ function triangulo() {
 }
 
 function losango() {
-
-    n = 4
 
     medidas.style.display = 'block'
 
@@ -373,8 +363,6 @@ function losango() {
 }
 
 function trapezio() {
-
-    n = 5
 
     medidas.style.display = 'block'
 
@@ -461,8 +449,6 @@ function trapezio() {
 } 
 
 function circulo() {
-
-    n = 6
 
     medidas.style.display = 'block'
 
@@ -700,7 +686,7 @@ function calcular() {
 
                 formula.style.display = 'block'
 
-                if (n == 1) { // Quadrado
+                if (imgQuadrado.style.display == 'block') { // Quadrado
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
@@ -748,7 +734,7 @@ function calcular() {
 
                     }, 3500)
 
-                } else if (n == 2) { // Retângulo
+                } else if (imgRetangulo.style.display == 'block') { // Retângulo
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
@@ -796,7 +782,7 @@ function calcular() {
 
                     }, 3500)
 
-                } else if (n == 3) { // Triângulo
+                } else if (imgTriangulo.style.display == 'block') { // Triângulo
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
@@ -855,7 +841,7 @@ function calcular() {
 
                     }, 5000)
 
-                } else if (n == 4) { // Losango
+                } else if (imgLosango.style.display == 'block') { // Losango
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
@@ -914,12 +900,12 @@ function calcular() {
 
                     }, 5000)
 
-                } else if (n == 5) { // Trapézio
+                } else if (imgTrapezio.style.display == 'block') { // Trapézio
 
                     formula.style.borderRightWidth = '2px'  
                     formula.style.top = '7%'
                     formula.style.left = '76%'
-                    formula.innerHTML = `<strong>Fórmula: A = ((B + b) x h)/2</strong>`
+                    formula.innerHTML = `<strong>Fórmula: A = (B + b) x h/2</strong>`
 
                     calculo00.style.borderRightWidth = '2px'  
 
@@ -936,7 +922,7 @@ function calcular() {
                         calculo00.style.display = 'block'
                         calculo00.style.top = '11%'
                         calculo00.style.left = '76%'
-                        calculo00.innerHTML = `<strong>A = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2</strong>`
+                        calculo00.innerHTML = `<strong>A = (${base.value} + ${baseMenor.value}) x ${altura.value}/2</strong>`
                         
                     }, 2000)
 
@@ -947,7 +933,7 @@ function calcular() {
                         calculo01.style.display = 'block'
                         calculo01.style.top = '15%'  
                         calculo01.style.left = '76%'
-                        calculo01.innerHTML = `<strong>A = (${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)})/2</strong>`
+                        calculo01.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)/2}</strong>`
                         
                     }, 3000)
 
@@ -1042,25 +1028,25 @@ function calcular() {
 
             setTimeout(function () {
 
-                if (n == 1) {
+                if (imgQuadrado.style.display == 'block') {
 
                     alert(`\nFórmula: A = L²\n\nA = ${base.value}²\n\nA = ${Number(base.value)**2}\n\nÁrea: ${Number(base.value)**2}m²\n`)
 
-                } else if (n == 2) {
+                } else if (imgRetangulo.style.display == 'block') {
 
                     alert(`\nFórmula: A = B x h\n\nA = ${base.value} x ${altura.value}\n\nA = ${Number(base.value) * Number(altura.value)}\n\nÁrea: ${Number(base.value) * Number(altura.value)}m²\n`)
 
-                } else if (n == 3) {
+                } else if (imgTriangulo.style.display == 'block') {
 
                     alert(`\nFórmula: A = (B x h)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) * Number(altura.value))/2}m²\n`)
 
-                } else if (n == 4) {
+                } else if (imgLosango.style.display == 'block') {
 
                     alert(`\nFórmula: A = (D x d)/2\n\nA = (${base.value} x ${altura.value})/2\n\nA = ${Number(base.value) * Number(altura.value)}/2\n\nA = ${(Number(base.value) * Number(altura.value))/2}\n\nÁrea = ${(Number(base.value) * Number(altura.value))/2}m²\n`)
 
-                } else if (n == 5) {
+                } else if (imgTrapezio.style.display == 'block') {
 
-                    alert(`\nFórmula: A = ((B + b) x h)/2\n\nA = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
+                    alert(`\nFórmula: A = (B + b) x h/2\n\nA = (${base.value} + ${baseMenor.value}) x ${altura.value}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2\n\nA = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}\n\nÁrea: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}m²\n`)
 
                 } else {
 
