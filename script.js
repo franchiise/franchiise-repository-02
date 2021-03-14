@@ -947,7 +947,7 @@ function calcular() {
                         calculo00.style.left = '76%'
                         calculo00.innerHTML = `<strong>A = ((${base.value} + ${baseMenor.value}) x ${altura.value})/2</strong>`
                         
-                    }, 2000)
+                    }, 3000)
 
                     setTimeout(function areaTrapezio01() {
 
@@ -958,7 +958,7 @@ function calcular() {
                         calculo01.style.left = '76%'
                         calculo01.innerHTML = `<strong>A = (${(Number(base.value) + Number(baseMenor.value))} x ${Number(altura.value)})/2</strong>`
                         
-                    }, 3000)
+                    }, 4000)
 
                     setTimeout(function areaTrapezio02() {
 
@@ -969,7 +969,7 @@ function calcular() {
                         calculo02.style.left = '76%'
                         calculo02.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))}/2</strong>`
 
-                    }, 4000)
+                    }, 6000)
 
                     setTimeout(function areaTrapezio03() {
 
@@ -980,7 +980,7 @@ function calcular() {
                         calculo03.style.left = '76%'
                         calculo03.innerHTML = `<strong>A = ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value))/2}</strong>`
 
-                    }, 5000)
+                    }, 7000)
                     
                     setTimeout(function areaTrapezio04() {
 
@@ -991,7 +991,7 @@ function calcular() {
                         calculo04.style.left = '76%'
                         calculo04.innerHTML = `<strong>Área: ${(Number(base.value) + Number(baseMenor.value)) * (Number(altura.value)/2)}m²</strong>`
 
-                    }, 6000)
+                    }, 8000)
 
                 } else { // Circulo
 
