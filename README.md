@@ -2,7 +2,7 @@
 
 Link: https://skulito.github.io/skulito-repository-02/
 
-![](Imagens/IMG_1684.jpg)
+![](Imagens/IMG_1684.jpg) ➜ lorem ipsum bla apart senoold
 
 ➜ As *áreas das figuras planas* medem o tamanho da superfície da figura. Desse modo, podemos pensar que quanto maior a superfície da figura, maior será sua área.
 
