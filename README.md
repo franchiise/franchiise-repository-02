@@ -2,6 +2,10 @@
 
 Link: https://skulito.github.io/skulito-repository-02/
 
+Passo-a-Passo: 
+
+![](Imagens/IMG_1684.jpg) ➜ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, sint? Beatae pariatur quae placeat molestias dolorem, itaque nostrum odio modi magni, aperiam officia quod vero asperiores eius eum soluta. Incidunt.
+
 ➜ As *áreas das figuras planas* medem o tamanho da superfície da figura. Desse modo, podemos pensar que quanto maior a superfície da figura, maior será sua área.
 
 ➜ No cálculo da área de determinada figura, existe um meio de calcular sua área, geralmente, para encontrar a área de uma figura basta multiplicar a base (b) pela altura (h).
