@@ -1,6 +1,6 @@
 # Franchiise 📁 | Cálculo - Área de Figura Geométrica 📐
 
-Link: https://franchiise.github.io/skulito-repository-02/
+Link: https://franchiise.github.io/franchiise-repository-02/
 
 Passo-a-Passo: 
 
