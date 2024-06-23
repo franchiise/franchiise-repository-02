@@ -1,6 +1,6 @@
-# Skulito 📁 | Cálculo - Área de Figura Geométrica 📐
+# Franchiise 📁 | Cálculo - Área de Figura Geométrica 📐
 
-Link: https://skulito.github.io/skulito-repository-02/
+Link: https://franchiise.github.io/skulito-repository-02/
 
 Passo-a-Passo: 
 
